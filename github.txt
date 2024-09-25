@@ -1,0 +1,41 @@
+commit 800947803bd726ab29ba6821ab7d7bcf574cf098
+Author: Jr0de <dotsandbitts@gmail.com>
+Date:   Wed Sep 25 00:30:13 2024 -0400
+
+    added name (jordan)
+
+commit 76bed434e874997764ab5302e439a0673a4c52eb
+Author: Andrew Renner <97562676+Marfit77@users.noreply.github.com>
+Date:   Tue Sep 24 22:02:05 2024 -0400
+
+    added name (andrew)
+
+commit 28f5d4b392cb65bd21d2f3cb11f0d86d51ec0e8d
+Author: Nick Fennelly <nfennelly01@gmail.com>
+Date:   Tue Sep 24 19:03:14 2024 -0400
+
+    commit
+
+commit 71e6e32a48a411d5a9378b15cc899cde86f2af2f
+Author: maccaabdi1 <143471838+maccaabdi1@users.noreply.github.com>
+Date:   Tue Sep 24 18:09:15 2024 -0400
+
+    Update README.md
+
+commit 54be108ba0bc659043da1ea14a70309f8217b825
+Author: Kelly <kelly.garcia.2377@gmail.com>
+Date:   Tue Sep 24 14:27:47 2024 -0400
+
+    added name
+
+commit 6c42759e451bc733807ca8a2e84085592dcae0a1
+Author: Justen <123820181+JustxJiang@users.noreply.github.com>
+Date:   Tue Sep 24 14:20:57 2024 -0400
+
+    Update README.md
+
+commit b58d6f1cc2bbd1529e4390923f82750462c8ab8e
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Mon Sep 23 20:33:57 2024 +0000
+
+    Initial commit
