@@ -5,13 +5,12 @@ An online U-Fund system built in Java 17=> and ___ _replace with other platform 
   
 ## Team
 
-- MEMBER1
+- Jordan Ciferni
 - JUSTEN JIANG
 - Macca Abdi
 - Kelly Garcia
 - Nick Fennelly
 - Andrew Renner
-
 
 ## Prerequisites
 
