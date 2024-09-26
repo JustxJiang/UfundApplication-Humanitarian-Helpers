@@ -1,10 +1,10 @@
 # PROJECT Home
 
-Welcome to the PROJECT Project!
+Welcome to the Pawsitive Connections Project!
 
 ## Team
 
-* MEMBER1
+* Andrew Renner
 * MEMBER2
 
 ## [Design Documentation](DesignDoc)
