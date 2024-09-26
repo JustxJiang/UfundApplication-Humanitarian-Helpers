@@ -4,7 +4,7 @@ Welcome to the PROJECT Project!
 
 ## Team
 
-* MEMBER1
+* Macca Abdi
 * MEMBER2
 
 ## [Design Documentation](DesignDoc)
