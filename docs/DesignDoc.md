@@ -12,7 +12,7 @@ geometry: margin=1in
 * Team name: TEAMNAME
 * Team members
   * Macca Abdi
-  * MEMBER2
+  * Kelly Garcia
   * MEMBER3
   * MEMBER4
 
