@@ -12,7 +12,8 @@ geometry: margin=1in
 * Team name: TeamAxiom
 * Team members
   * Andrew Renner
-  * MEMBER2
+  * Macca Abdi
+  * Kelly Garcia
   * MEMBER3
   * MEMBER4
 
