@@ -5,7 +5,7 @@ Welcome to the PROJECT Project!
 ## Team
 
 * Macca Abdi
-* MEMBER2
+* Kelly Garcia
 
 ## [Design Documentation](DesignDoc)
 
