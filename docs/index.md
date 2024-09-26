@@ -5,7 +5,7 @@ Welcome to the Pawsitive Connections Project!
 ## Team
 * Andrew Renner
 * Macca Abdi
-* MEMBER2
+* Kelly Garcia
 
 ## [Design Documentation](DesignDoc)
 
