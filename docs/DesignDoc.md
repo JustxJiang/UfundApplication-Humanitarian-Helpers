@@ -14,8 +14,8 @@ geometry: margin=1in
   * Andrew Renner
   * Macca Abdi
   * Kelly Garcia
-  * MEMBER3
-  * MEMBER4
+  * Jordan Ciferni
+  * Justen Jiang
 
 ## Executive Summary
 
