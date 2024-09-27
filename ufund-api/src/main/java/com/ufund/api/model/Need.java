@@ -1,6 +1,4 @@
-package com.heroes.api.heroesapi.model;
-
-import java.util.logging.Logger;
+import com.ufund.api.model.*;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 /**
@@ -27,7 +25,7 @@ public class Need {
      * is not provided in the JSON object, the Java field gets the default Java
      * value, i.e. 0 for int
      */
-    public Hero(@JsonProperty("id") int id, @JsonProperty("name") String name) {
+    public Need(@JsonProperty("id") int id, @JsonProperty("name") String name) {
         this.id = id;
         this.name = name;
     }
