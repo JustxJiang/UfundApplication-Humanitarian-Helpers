@@ -23,6 +23,7 @@ import com.ufund.api.model.User;
 public class UserController {
     private static final Logger LOG = Logger.getLogger(UserController.class.getName());
 
+    /* Create User (CRUD) */
     @PostMapping("")
     public ResponseEntity<User> createHero(@RequestBody User user) {
         LOG.info("POST /users " + user);
