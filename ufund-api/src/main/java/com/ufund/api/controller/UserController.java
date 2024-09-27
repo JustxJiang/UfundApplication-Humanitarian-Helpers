@@ -22,9 +22,10 @@ import com.ufund.api.model.User;
 
 public class UserController {
     private static final Logger LOG = Logger.getLogger(UserController.class.getName());
+    private UserDAO userDao;
 
     @PostMapping("")
-    public ResponseEntity<User> createHero(@RequestBody User user) {
+    public ResponseEntity<User> createUser(@RequestBody User user) {
         LOG.info("POST /users " + user);
 
         // Replace below with your implementation
@@ -32,23 +33,23 @@ public class UserController {
     }
 
     @GetMapping("/")
-    public ResponseEntity<Hero[]> searchHeroes(@RequestParam String name) {
-        LOG.info("GET /heroes/?name="+name);
+    public ResponseEntity<User[]> searchUsers(@RequestParam String name) {
+        LOG.info("GET /Useres/?name="+name);
 
         try {
 
-            Hero[] heroArray = heroDao.getHeroes();
-            ArrayList<Hero> foundList = new ArrayList<>();
+            User[] UserArray = userDao.getUsers();
+            ArrayList<User> foundList = new ArrayList<>();
 
-            for (int i = 0; i < heroArray.length; i++) {
+            for (int i = 0; i < UserArray.length; i++) {
                 
-                if (heroArray[i].getName().indexOf(name) != -1) {
-                    foundList.add(heroArray[i]);
+                if (UserArray[i].getName().indexOf(name) != -1) {
+                    foundList.add(UserArray[i]);
                 }
 
             }
 
-            Hero[] foundArray = new Hero[foundList.size()];
+            User[] foundArray = new User[foundList.size()];
             foundList.toArray(foundArray);
 
             return new ResponseEntity<>(foundArray, HttpStatus.OK);
