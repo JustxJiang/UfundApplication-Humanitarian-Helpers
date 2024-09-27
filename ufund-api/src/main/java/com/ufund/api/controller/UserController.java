@@ -21,8 +21,8 @@ import com.ufund.api.persistence.CupboardDAO;
 import com.ufund.api.model.Need;
 
 
-public class CupboardController {
-    private static final Logger LOG = Logger.getLogger(CupboardController.class.getName());
+public class UserController {
+    private static final Logger LOG = Logger.getLogger(UserController.class.getName());
     private CupboardDAO cupboardDAO;
     /* Create User (CRUD) */
     @PostMapping("")
