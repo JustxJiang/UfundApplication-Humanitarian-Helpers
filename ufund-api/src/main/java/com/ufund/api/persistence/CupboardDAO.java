@@ -1,14 +1,16 @@
 package com.ufund.api.persistence;
 
 import java.io.IOException;
-import com.ufund.api.model.User;
+
+import com.ufund.api.model.Need;
+
 
 /**
  * Defines the interface for Hero object persistence
  * 
  * @author SWEN Faculty
  */
-public interface UserDAO {
+public interface CupboardDAO {
     /**
      * Retrieves all {@linkplain Hero heroes}
      * 
@@ -16,7 +18,7 @@ public interface UserDAO {
      * 
      * @throws IOException if an issue with underlying storage
      */
-    User[] getUsers() throws IOException;
+    Need[] getNeeds() throws IOException;
 
     /**
      * Finds all {@linkplain Hero heroes} whose name contains the given text
@@ -27,7 +29,7 @@ public interface UserDAO {
      * 
      * @throws IOException if an issue with underlying storage
      */
-    User[] findUsers(String containsText) throws IOException;
+    Need[] findNeeds(String containsText) throws IOException;
 
     /**
      * Retrieves a {@linkplain Hero hero} with the given id
@@ -40,7 +42,7 @@ public interface UserDAO {
      * 
      * @throws IOException if an issue with underlying storage
      */
-    User getUser(int id) throws IOException;
+    Need getNeed(int id) throws IOException;
 
     /**
      * Creates and saves a {@linkplain Hero hero}
@@ -53,7 +55,7 @@ public interface UserDAO {
      * 
      * @throws IOException if an issue with underlying storage
      */
-    User createUser(User user) throws IOException;
+    Need creatNeed(Need need) throws IOException;
 
     /**
      * Updates and saves a {@linkplain Hero hero}
@@ -65,7 +67,7 @@ public interface UserDAO {
      * 
      * @throws IOException if underlying storage cannot be accessed
      */
-    User updateUser(User user) throws IOException;
+    Need updateNeed(Need need) throws IOException;
 
     /**
      * Deletes a {@linkplain Hero hero} with the given id
@@ -78,6 +80,6 @@ public interface UserDAO {
      * 
      * @throws IOException if underlying storage cannot be accessed
      */
-    boolean deleteUser(int id) throws IOException;
+    boolean deleteNeed(int id) throws IOException;
 }
 
