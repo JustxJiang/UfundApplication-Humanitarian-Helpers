@@ -5,12 +5,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.logging.Logger;
+
 public class UserController {
     private static final Logger LOG = Logger.getLogger(UserController.class.getName());
 
     @PostMapping("")
-    public ResponseEntity<Hero> createHero(@RequestBody Hero hero) {
-        LOG.info("POST /heroes " + hero);
+    public ResponseEntity<User> createHero(@RequestBody User user) {
+        LOG.info("POST /users " + user);
 
         // Replace below with your implementation
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
