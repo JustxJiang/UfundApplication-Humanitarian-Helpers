@@ -16,7 +16,7 @@ public interface UserDAO {
      * 
      * @throws IOException if an issue with underlying storage
      */
-    User[] getHeroes() throws IOException;
+    User[] getUsers() throws IOException;
 
     /**
      * Finds all {@linkplain Hero heroes} whose name contains the given text
@@ -27,7 +27,7 @@ public interface UserDAO {
      * 
      * @throws IOException if an issue with underlying storage
      */
-    User[] findHeroes(String containsText) throws IOException;
+    User[] findUsers(String containsText) throws IOException;
 
     /**
      * Retrieves a {@linkplain Hero hero} with the given id
@@ -80,3 +80,4 @@ public interface UserDAO {
      */
     boolean deleteUser(int id) throws IOException;
 }
+
