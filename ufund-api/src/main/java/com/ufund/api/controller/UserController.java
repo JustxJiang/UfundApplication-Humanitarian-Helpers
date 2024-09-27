@@ -37,18 +37,18 @@ public class UserController {
 
         try {
 
-            Hero[] heroArray = heroDao.getHeroes();
-            ArrayList<Hero> foundList = new ArrayList<>();
+            User[] userArray = userDao.getUsers();
+            ArrayList<User> foundList = new ArrayList<>();
 
-            for (int i = 0; i < heroArray.length; i++) {
+            for (int i = 0; i < userArray.length; i++) {
                 
-                if (heroArray[i].getName().indexOf(name) != -1) {
-                    foundList.add(heroArray[i]);
+                if (userArray[i].getName().indexOf(name) != -1) {
+                    foundList.add(userArray[i]);
                 }
 
             }
 
-            Hero[] foundArray = new Hero[foundList.size()];
+            User[] foundArray = new User[foundList.size()];
             foundList.toArray(foundArray);
 
             return new ResponseEntity<>(foundArray, HttpStatus.OK);
