@@ -1,5 +1,5 @@
 package com.ufund.api.controller;
 
-public class HeroController {
+public class UserController {
     
 }
