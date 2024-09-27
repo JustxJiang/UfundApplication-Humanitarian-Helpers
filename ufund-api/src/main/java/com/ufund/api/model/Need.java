@@ -1,5 +1,5 @@
-import com.ufund.api.model.*;
-
+// import com.ufund.api.model.*;
+import java.util.logging.Logger;
 import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * Represents a Hero entity
