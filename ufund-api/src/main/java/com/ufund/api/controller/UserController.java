@@ -24,6 +24,7 @@ public class UserController {
     private static final Logger LOG = Logger.getLogger(UserController.class.getName());
     private UserDAO userDao;
 
+    /* Create User (CRUD) */
     @PostMapping("")
     public ResponseEntity<User> createUser(@RequestBody User user) {
         LOG.info("POST /users " + user);
@@ -38,6 +39,7 @@ public class UserController {
 
         try {
 
+<<<<<<< HEAD
             User[] UserArray = userDao.getUsers();
             ArrayList<User> foundList = new ArrayList<>();
 
@@ -45,6 +47,15 @@ public class UserController {
                 
                 if (UserArray[i].getName().indexOf(name) != -1) {
                     foundList.add(UserArray[i]);
+=======
+            User[] userArray = userDao.getUsers();
+            ArrayList<User> foundList = new ArrayList<>();
+
+            for (int i = 0; i < userArray.length; i++) {
+                
+                if (userArray[i].getName().indexOf(name) != -1) {
+                    foundList.add(userArray[i]);
+>>>>>>> f453f0266497698a2440f2ffeb42c250c12d798a
                 }
 
             }
