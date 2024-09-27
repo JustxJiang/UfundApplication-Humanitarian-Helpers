@@ -17,39 +17,40 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.ufund.api.persistence.UserDAO;
-import com.ufund.api.model.User;
+import com.ufund.api.persistence.CupboardDAO;
+import com.ufund.api.model.Need;
 
-public class UserController {
-    private static final Logger LOG = Logger.getLogger(UserController.class.getName());
-    private UserDAO userDAO;
+
+public class CupboardController {
+    private static final Logger LOG = Logger.getLogger(CupboardController.class.getName());
+    private CupboardDAO cupboardDAO;
     /* Create User (CRUD) */
     @PostMapping("")
-    public ResponseEntity<User> createHero(@RequestBody User user) {
-        LOG.info("POST /users " + user);
+    public ResponseEntity<Need> createNeed(@RequestBody Need need) {
+        LOG.info("POST /users " + need);
 
         // Replace below with your implementation
         return new ResponseEntity<>(HttpStatus.NOT_IMPLEMENTED);
     }
 
     @GetMapping("/")
-    public ResponseEntity<User[]> searchHeroes(@RequestParam String name) {
+    public ResponseEntity<Need[]> searchNeed(@RequestParam String name) {
         LOG.info("GET /heroes/?name="+name);
 
         try {
 
-            User[] userArray = userDAO.getUsers();
-            ArrayList<User> foundList = new ArrayList<>();
+            Need[] needArray = cupboardDAO.getNeeds();
+            ArrayList<Need> foundList = new ArrayList<>();
 
-            for (int i = 0; i < userArray.length; i++) {
+            for (int i = 0; i < needArray.length; i++) {
                 
-                if (userArray[i].getName().indexOf(name) != -1) {
-                    foundList.add(userArray[i]);
+                if (needArray[i].getName().indexOf(name) != -1) {
+                    foundList.add(needArray[i]);
                 }
 
             }
 
-            User[] foundArray = new User[foundList.size()];
+            Need[] foundArray = new Need[foundList.size()];
             foundList.toArray(foundArray);
 
             return new ResponseEntity<>(foundArray, HttpStatus.OK);
