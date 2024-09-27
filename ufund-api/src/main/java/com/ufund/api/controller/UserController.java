@@ -22,11 +22,10 @@ import com.ufund.api.model.User;
 
 public class UserController {
     private static final Logger LOG = Logger.getLogger(UserController.class.getName());
-    private UserDAO userDao;
-
+    private UserDAO userDAO;
     /* Create User (CRUD) */
     @PostMapping("")
-    public ResponseEntity<User> createUser(@RequestBody User user) {
+    public ResponseEntity<User> createHero(@RequestBody User user) {
         LOG.info("POST /users " + user);
 
         // Replace below with your implementation
@@ -34,28 +33,18 @@ public class UserController {
     }
 
     @GetMapping("/")
-    public ResponseEntity<User[]> searchUsers(@RequestParam String name) {
-        LOG.info("GET /Useres/?name="+name);
+    public ResponseEntity<User[]> searchHeroes(@RequestParam String name) {
+        LOG.info("GET /heroes/?name="+name);
 
         try {
 
-<<<<<<< HEAD
-            User[] UserArray = userDao.getUsers();
-            ArrayList<User> foundList = new ArrayList<>();
-
-            for (int i = 0; i < UserArray.length; i++) {
-                
-                if (UserArray[i].getName().indexOf(name) != -1) {
-                    foundList.add(UserArray[i]);
-=======
-            User[] userArray = userDao.getUsers();
+            User[] userArray = userDAO.getUsers();
             ArrayList<User> foundList = new ArrayList<>();
 
             for (int i = 0; i < userArray.length; i++) {
                 
                 if (userArray[i].getName().indexOf(name) != -1) {
                     foundList.add(userArray[i]);
->>>>>>> f453f0266497698a2440f2ffeb42c250c12d798a
                 }
 
             }
