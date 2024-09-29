@@ -1,4 +1,5 @@
 package com.ufund.api.model;
+// import java.util.logging.Logger;
 
 import java.util.logging.Logger;
 //idk
@@ -9,7 +10,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @author SWEN Faculty
  */
 public class Need {
-    private static final Logger LOG = Logger.getLogger(Need.class.getName());
+
+    // Use later
+    // private static final Logger LOG = Logger.getLogger(Need.class.getName());
 
     // Package private for tests
     static final String STRING_FORMAT = "Hero [id=%d, name=%s]";
