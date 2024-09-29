@@ -67,7 +67,7 @@ public interface CupboardDAO {
      * 
      * @throws IOException if underlying storage cannot be accessed
      */
-    Need updateNeed(Need need) throws IOException;
+    Need updateNeed(Need need, Need newNeed) throws IOException;
 
     /**
      * Deletes a {@linkplain Hero hero} with the given id
