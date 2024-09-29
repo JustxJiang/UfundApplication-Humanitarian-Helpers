@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-// import com.ufund.api.model.*;
-import java.util.logging.Logger;
-=======
 package com.ufund.api.model;
-
-import java.util.logging.Logger;
-//idk
->>>>>>> bf011a0ddd7e34e79d2da247d841be39dc366aac
+// import java.util.logging.Logger;
 import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * Represents a Hero entity
@@ -14,7 +7,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @author SWEN Faculty
  */
 public class Need {
-    private static final Logger LOG = Logger.getLogger(Need.class.getName());
+
+    // Use later
+    // private static final Logger LOG = Logger.getLogger(Need.class.getName());
 
     // Package private for tests
     static final String STRING_FORMAT = "Hero [id=%d, name=%s]";
