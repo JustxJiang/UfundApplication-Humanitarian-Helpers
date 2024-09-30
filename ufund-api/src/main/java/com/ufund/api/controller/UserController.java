@@ -190,16 +190,6 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-<<<<<<< HEAD
-    public ResponseEntity<Need[]> deleteNeed(@RequestParam int id, @RequestParam String name) {
-        LOG.info("DELETE /needs/" + id);
-        try {
-            boolean deleted = NeedDao.deleteNeed(id);
-            if(deleted)
-                return new ResponseEntity<>(HttpStatus.OK);
-            else
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-=======
     public ResponseEntity<Need[]> deleteNeed(@PathVariable int id) {
         LOG.info("DELETE /Needs/" + id);
         try{
@@ -212,7 +202,6 @@ public class UserController {
                     return new ResponseEntity<>(HttpStatus.NOT_FOUND);
                 }
             }
->>>>>>> 6658f90d65651c8e5d813df1bfdacef92b91746d
         } catch (Exception e) {
                     LOG.log(Level.SEVERE, e.getLocalizedMessage());
                 }
