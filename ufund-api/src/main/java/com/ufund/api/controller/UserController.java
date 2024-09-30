@@ -72,19 +72,19 @@ public class UserController {
         }
 
     }
-        @GetMapping("/{id}")
-        public ResponseEntity<Need> getNeed(@PathVariable int id) {
+        
+    @GetMapping("/{id}")
+    public ResponseEntity<Need> getNeed(@PathVariable int id) {
         LOG.info("GET /heroes/" + id);
         try {
             Need need = NeedDao.getNeed(id);
             if (need != null){
-
                 return new ResponseEntity<Need>(need,HttpStatus.OK);
             }    
             else{
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
-               
+                
         }
         catch(IOException e) {
             LOG.log(Level.SEVERE,e.getLocalizedMessage());
@@ -144,5 +144,6 @@ public class UserController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-        
+    
+    //TODO: get cupboard method
 }
