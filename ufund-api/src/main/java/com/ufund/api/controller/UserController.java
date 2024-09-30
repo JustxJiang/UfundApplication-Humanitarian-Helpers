@@ -145,5 +145,22 @@ public class UserController {
         }
     }
     
-    //TODO: get cupboard method
+    @GetMapping("")
+    public ResponseEntity<Need[]> getNeeds(){
+        LOG.info("GET /needs");
+        try {
+            Need[] needs = NeedDao.getNeeds();
+            if(needs.length > 0){
+                return new ResponseEntity<>(needs, HttpStatus.OK);
+                
+            }else{ // getNeeds returned an array of 0 needs
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+
+        } catch (IOException e) {
+            LOG.log(Level.SEVERE,e.getLocalizedMessage());
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
 }
