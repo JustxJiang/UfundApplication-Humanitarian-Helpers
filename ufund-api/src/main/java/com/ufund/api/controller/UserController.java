@@ -74,13 +74,8 @@ public class UserController {
 
     }
         
-<<<<<<< HEAD
-        @GetMapping("/{id}")
-        public ResponseEntity<Need> getNeed(@PathVariable int id) {
-=======
     @GetMapping("/{id}")
     public ResponseEntity<Need> getNeed(@PathVariable int id) {
->>>>>>> 0d0f209da6261b48e71d247bd5603c08a4576266
         LOG.info("GET /heroes/" + id);
         try {
             Need need = NeedDao.getNeed(id);
