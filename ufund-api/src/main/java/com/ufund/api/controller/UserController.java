@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -112,6 +113,10 @@ public class UserController {
     //     }
     // }
 
+    public ResponseEntity<Need> findNeeds(String containsText) {
+        return null;
+    }
+
     @PutMapping("")
     public ResponseEntity<Need> updateNeed(@RequestBody Need need) {
         LOG.info("PUT /needs " + need);
@@ -146,5 +151,6 @@ public class UserController {
         }
     }
 }
-    
+
     //TODO: get cupboard method
+
