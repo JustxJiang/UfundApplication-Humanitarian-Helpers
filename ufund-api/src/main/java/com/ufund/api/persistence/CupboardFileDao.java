@@ -24,6 +24,7 @@ import com.ufund.api.model.Need;
  */
 @Component
 public class CupboardFileDao implements CupboardDAO {
+    @SuppressWarnings("unused")
     private static final Logger LOG = Logger.getLogger(CupboardFileDao.class.getName());
     Map<Integer, Need> needs;   // Provides a local cache of the hero objects
                                 // so that we don't need to read from the file
