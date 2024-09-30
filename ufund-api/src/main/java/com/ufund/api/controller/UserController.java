@@ -13,39 +13,76 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.ufund.api.model.Need;
 import com.ufund.api.persistence.CupboardDAO;
 
+
+@RestController
+@RequestMapping("needs")
 public class UserController {
     private static final Logger LOG = Logger.getLogger(UserController.class.getName());
     private CupboardDAO NeedDao;
 
-    @PostMapping("")
-    public ResponseEntity<Need> createHero(@RequestBody Need need) {
-        LOG.info("POST /needs " + need);
+    public UserController(CupboardDAO NeedDao) {
+        this.NeedDao = NeedDao;
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Need> getNeed(@PathVariable int id) {
+
+        LOG.info("GET /needs/" + id);
+        try {
+            Need need = NeedDao.getNeed(id);
+            if (need != null){
+                return new ResponseEntity<Need>(need,HttpStatus.OK);
+            }    
+            else{
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+                
+        }
+        catch(IOException e) {
+            LOG.log(Level.SEVERE,e.getLocalizedMessage());
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+    @GetMapping("")
+    public ResponseEntity<Need[]> getNeeds(){
+        LOG.info("GET /needs");
 
         try {
+            
+            ArrayList<Need> needList = new ArrayList<>();
 
-            if (need != null) {
-                NeedDao.createNeed(need);
+            // Hardcoded, ideally should check for min id
+            for (int needCount = 1; ; needCount++) {
+                Need need = NeedDao.getNeed(needCount);
+                if (need == null) {
+                    break;
+                }
+                needList.add(need);
             }
 
-            return new ResponseEntity<>(HttpStatus.OK);
+            Need[] needArray = new Need[needList.size()];
+            needList.toArray(needArray);
 
+            return new ResponseEntity<Need[]>(needArray, HttpStatus.OK);
+            
         }
-
         catch (Exception e) {
             LOG.log(Level.SEVERE,e.getLocalizedMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
-
     }
 
     @GetMapping("/")
     public ResponseEntity<Need[]> searchNeeds(@RequestParam String name) {
-        LOG.info("GET /Needs/?name="+name);
+        LOG.info("GET /needs/?name="+name);
 
         try {
 
@@ -72,26 +109,28 @@ public class UserController {
         }
 
     }
-        
-        @GetMapping("/{id}")
-        public ResponseEntity<Need> getNeed(@PathVariable int id) {
 
-        LOG.info("GET /heroes/" + id);
+    @PostMapping("")
+    public ResponseEntity<Need> createHero(@RequestBody Need need) {
+        LOG.info("POST /needs " + need);
+
         try {
-            Need need = NeedDao.getNeed(id);
-            if (need != null){
-                return new ResponseEntity<Need>(need,HttpStatus.OK);
-            }    
-            else{
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+            if (need != null) {
+                NeedDao.createNeed(need);
             }
-                
+
+            return new ResponseEntity<>(HttpStatus.OK);
+
         }
-        catch(IOException e) {
+
+        catch (Exception e) {
             LOG.log(Level.SEVERE,e.getLocalizedMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
+
     }
+
 
     // public ResponseEntity<Need[]> setNeeds(@RequestParam String name, @RequestParam String newName) {
     //     LOG.info("SET /Needs/?name="+name+"/?newName="+newName);
@@ -137,7 +176,7 @@ public class UserController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Need[]> deleteNeed(@RequestParam int id, @RequestParam String name) {
-        LOG.info("DELETE /Needs/?name=" + name + "/?id"+ id);
+        LOG.info("DELETE /needs/" + id);
         try {
             boolean deleted = NeedDao.deleteNeed(id);
             if(deleted)
@@ -149,23 +188,6 @@ public class UserController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-    
-    @GetMapping("")
-    public ResponseEntity<Need[]> getNeeds(){
-        LOG.info("GET /needs");
-        try {
-            Need[] needs = NeedDao.getNeeds();
-            if(needs.length > 0){
-                return new ResponseEntity<>(needs, HttpStatus.OK);
-                
-            }else{ // getNeeds returned an array of 0 needs
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-            }
 
-        } catch (IOException e) {
-            LOG.log(Level.SEVERE,e.getLocalizedMessage());
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
-    }
 
 }
