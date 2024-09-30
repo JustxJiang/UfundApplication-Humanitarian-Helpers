@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 /**
  * Represents a Hero entity
  * 
- * @author SWEN Faculty
+ * @author Team Axiom
  */
 public class Need {
     private static final Logger LOG = Logger.getLogger(Need.class.getName());
@@ -18,9 +18,9 @@ public class Need {
     @JsonProperty("name") private String name;
 
     /**
-     * Create a hero with the given id and name
-     * @param id The id of the hero
-     * @param name The name of the hero
+     * Create a need with the given id and name
+     * @param id The id of the need
+     * @param name The name of the need
      * 
      * {@literal @}JsonProperty is used in serialization and deserialization
      * of the JSON object to the Java object in mapping the fields.  If a field
@@ -40,7 +40,7 @@ public class Need {
 
     /**
      * Sets the name of the need - necessary for JSON object to Java object deserialization
-     * @param name The name of the hero
+     * @param name The name of the need
      */
     public void setName(String name) {this.name = name;}
 
