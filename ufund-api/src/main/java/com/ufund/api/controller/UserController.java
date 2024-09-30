@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -72,14 +73,13 @@ public class UserController {
         }
 
     }
-        
         @GetMapping("/{id}")
         public ResponseEntity<Need> getNeed(@PathVariable int id) {
-
         LOG.info("GET /heroes/" + id);
         try {
             Need need = NeedDao.getNeed(id);
             if (need != null){
+
                 return new ResponseEntity<Need>(need,HttpStatus.OK);
             }    
             else{
