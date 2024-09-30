@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -110,6 +111,10 @@ public class UserController {
     //         return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     //     }
     // }
+
+    public ResponseEntity<Need> findNeeds(String containsText) {
+        return null;
+    }
 
     @PutMapping("")
     public ResponseEntity<Need> updateHero(@RequestBody Need need) {
