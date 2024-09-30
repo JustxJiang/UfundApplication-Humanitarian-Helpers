@@ -58,6 +58,7 @@ public class UserController {
         }
 
     }
+        
         @GetMapping("/{id}")
         public ResponseEntity<Need> getNeed(@PathVariable int id) {
         LOG.info("GET /heroes/" + id);
