@@ -1,9 +1,6 @@
 package com.ufund.api.persistence;
-
 import java.io.IOException;
-
 import com.ufund.api.model.Need;
-
 
 /**
  * Defines the interface for Hero object persistence
@@ -55,7 +52,7 @@ public interface CupboardDAO {
      * 
      * @throws IOException if an issue with underlying storage
      */
-    Need creatNeed(Need need) throws IOException;
+    Need createNeed(Need need) throws IOException;
 
     /**
      * Updates and saves a {@linkplain Hero hero}
@@ -67,7 +64,7 @@ public interface CupboardDAO {
      * 
      * @throws IOException if underlying storage cannot be accessed
      */
-    Need updateNeed(Need need, Need newNeed) throws IOException;
+    Need updateNeed(Need need) throws IOException;
 
     /**
      * Deletes a {@linkplain Hero hero} with the given id
