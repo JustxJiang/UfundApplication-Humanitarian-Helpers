@@ -73,8 +73,9 @@ public class UserController {
 
     }
         
-    @GetMapping("/{id}")
-    public ResponseEntity<Need> getNeed(@PathVariable int id) {
+        @GetMapping("/{id}")
+        public ResponseEntity<Need> getNeed(@PathVariable int id) {
+
         LOG.info("GET /heroes/" + id);
         try {
             Need need = NeedDao.getNeed(id);
@@ -111,8 +112,12 @@ public class UserController {
     //     }
     // }
 
+    public ResponseEntity<Need> findNeeds(String containsText) {
+        return null;
+    }
+
     @PutMapping("")
-    public ResponseEntity<Need> updateHero(@RequestBody Need need) {
+    public ResponseEntity<Need> updateNeed(@RequestBody Need need) {
         LOG.info("PUT /needs " + need);
         try {
 

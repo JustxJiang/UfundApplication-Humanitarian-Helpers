@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * @author Team Axiom
  */
 public class Need {
+    @SuppressWarnings("unused")
     private static final Logger LOG = Logger.getLogger(Need.class.getName());
 
     // Package private for tests
