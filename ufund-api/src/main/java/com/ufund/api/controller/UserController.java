@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.apache.catalina.connector.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -109,6 +110,7 @@ public class UserController {
         }
 
     }
+<<<<<<< HEAD
 
     @PostMapping("")
     public ResponseEntity<Need> createHero(@RequestBody Need need) {
@@ -118,6 +120,19 @@ public class UserController {
 
             if (need != null) {
                 NeedDao.createNeed(need);
+=======
+        @GetMapping("/{id}")
+        public ResponseEntity<Need> getNeed(@PathVariable int id) {
+        LOG.info("GET /heroes/" + id);
+        try {
+            Need need = NeedDao.getNeed(id);
+            if (need != null){
+
+                return new ResponseEntity<Need>(need,HttpStatus.OK);
+            }    
+            else{
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+>>>>>>> 6658f90d65651c8e5d813df1bfdacef92b91746d
             }
 
             return new ResponseEntity<>(HttpStatus.OK);
@@ -175,6 +190,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
+<<<<<<< HEAD
     public ResponseEntity<Need[]> deleteNeed(@RequestParam int id, @RequestParam String name) {
         LOG.info("DELETE /needs/" + id);
         try {
@@ -183,11 +199,41 @@ public class UserController {
                 return new ResponseEntity<>(HttpStatus.OK);
             else
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+=======
+    public ResponseEntity<Need[]> deleteNeed(@PathVariable int id) {
+        LOG.info("DELETE /Needs/" + id);
+        try{
+            Need need = NeedDao.getNeed(id);
+            if(need != null){
+                boolean deleted = NeedDao.deleteNeed(id);
+                if(deleted){
+                    return new ResponseEntity<>(HttpStatus.OK);
+                }else{
+                    return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+                }
+            }
+>>>>>>> 6658f90d65651c8e5d813df1bfdacef92b91746d
         } catch (Exception e) {
-            LOG.log(Level.SEVERE, e.getLocalizedMessage());
+                    LOG.log(Level.SEVERE, e.getLocalizedMessage());
+                }
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
+<<<<<<< HEAD
     }
+=======
+    
+    @GetMapping("")
+    public ResponseEntity<Need[]> getNeeds(){
+        LOG.info("GET /needs");
+        try {
+            Need[] needs = NeedDao.getNeeds();
+            if(needs.length > 0){
+                return new ResponseEntity<>(needs, HttpStatus.OK);
+                
+            }else{ // getNeeds returned an array of 0 needs
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
+>>>>>>> 6658f90d65651c8e5d813df1bfdacef92b91746d
 
 
 }
