@@ -176,7 +176,7 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Need[]> deleteNeed(@RequestParam int id, @RequestParam String name) {
+    public ResponseEntity<Need[]> deleteNeed(@PathVariable int id) {
         LOG.info("DELETE /needs/" + id);
         try {
             boolean deleted = NeedDao.deleteNeed(id);
