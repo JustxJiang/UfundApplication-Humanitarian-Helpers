@@ -175,11 +175,14 @@ public class UserController {
     public ResponseEntity<Need[]> deleteNeed(@PathVariable int id) {
         LOG.info("DELETE /needs/" + id);
         try {
-            boolean deleted = NeedDao.deleteNeed(id);
-            if(deleted)
-                return new ResponseEntity<>(HttpStatus.OK);
-            else
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            Need[] needarray = NeedDao.getNeeds();
+            for(int i = 0; i < needarray.length; i++){
+                if(needarray[i].getId() == id){
+                    NeedDao.deleteNeed(id);
+                    return new ResponseEntity<>(HttpStatus.OK);
+                }
+            }
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         } catch (Exception e) {
                     LOG.log(Level.SEVERE, e.getLocalizedMessage());
                 }
