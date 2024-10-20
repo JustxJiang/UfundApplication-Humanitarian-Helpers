@@ -26,10 +26,10 @@ import com.ufund.api.persistence.CupboardDAO;
 @RequestMapping("needs")
 public class UserController {
     private static final Logger LOG = Logger.getLogger(UserController.class.getName());
-    private CupboardDAO NeedDao;
+    private CupboardDAO needDao;
 
-    public UserController(CupboardDAO NeedDao) {
-        this.NeedDao = NeedDao;
+    public UserController(CupboardDAO needDao) {
+        this.needDao = needDao;
     }
 
     @GetMapping("/{id}")
@@ -37,7 +37,7 @@ public class UserController {
 
         LOG.info("GET /needs/" + id);
         try {
-            Need need = NeedDao.getNeed(id);
+            Need need = needDao.getNeed(id);
             if (need != null){
                 return new ResponseEntity<Need>(need,HttpStatus.OK);
             }    
@@ -62,7 +62,7 @@ public class UserController {
 
             // Hardcoded, ideally should check for min id
             for (int needCount = 1; ; needCount++) {
-                Need need = NeedDao.getNeed(needCount);
+                Need need = needDao.getNeed(needCount);
                 if (need == null) {
                     break;
                 }
@@ -87,7 +87,7 @@ public class UserController {
 
         try {
 
-            Need[] NeedArray = NeedDao.getNeeds();
+            Need[] NeedArray = needDao.getNeeds();
             ArrayList<Need> foundList = new ArrayList<>();
 
             for (int i = 0; i < NeedArray.length; i++) {
@@ -111,17 +111,27 @@ public class UserController {
 
     }
 
+    
     @PostMapping("")
-    public ResponseEntity<Need> createHero(@RequestBody Need need) {
+    public ResponseEntity<Need> createNeed(@RequestBody Need need) {
         LOG.info("POST /needs " + need);
 
         try {
 
             if (need != null) {
-                NeedDao.createNeed(need);
-            }
+                Need createdNeed = needDao.createNeed(need);
+                
+                if(createdNeed == null){
+                    return new ResponseEntity<>(HttpStatus.CONFLICT);
+                }
+                return new ResponseEntity<>(HttpStatus.CREATED);
 
-            return new ResponseEntity<>(HttpStatus.OK);
+            }
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
+
+           
+
+            
 
         }
 
@@ -129,9 +139,9 @@ public class UserController {
             LOG.log(Level.SEVERE,e.getLocalizedMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
+        
 
     }
-
 
     // public ResponseEntity<Need[]> setNeeds(@RequestParam String name, @RequestParam String newName) {
     //     LOG.info("SET /Needs/?name="+name+"/?newName="+newName);
@@ -153,15 +163,19 @@ public class UserController {
     // }
 
     @PutMapping("")
-    public ResponseEntity<Need> updateHero(@RequestBody Need need) {
+    public ResponseEntity<Need> updateNeed(@RequestBody Need need) {
         LOG.info("PUT /needs " + need);
         try {
 
             if (need != null) {
-                NeedDao.updateNeed(need);
+                Need updatedNeed =needDao.updateNeed(need);
+
+                return new ResponseEntity<>(updatedNeed,HttpStatus.OK);
             }
 
-            return new ResponseEntity<>(HttpStatus.OK);
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+
+            
 
         }
 
@@ -175,10 +189,10 @@ public class UserController {
     public ResponseEntity<Need[]> deleteNeed(@PathVariable int id) {
         LOG.info("DELETE /needs/" + id);
         try {
-            Need[] needarray = NeedDao.getNeeds();
+            Need[] needarray = needDao.getNeeds();
             for(int i = 0; i < needarray.length; i++){
                 if(needarray[i].getId() == id){
-                    NeedDao.deleteNeed(id);
+                    needDao.deleteNeed(id);
                     return new ResponseEntity<>(HttpStatus.OK);
                 }
             }
