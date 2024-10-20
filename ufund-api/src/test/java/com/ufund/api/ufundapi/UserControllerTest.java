@@ -4,6 +4,11 @@ package com.ufund.api.ufundapi;
 import com.ufund.api.controller.UserController;
 import com.ufund.api.model.Need;
 import com.ufund.api.persistence.CupboardDAO;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.doThrow;
+import static org.mockito.Mockito.when;
+
 import java.io.IOException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -87,5 +92,29 @@ public class UserControllerTest {
       Assertions.assertEquals(HttpStatus.OK, response.getStatusCode());
       Assertions.assertEquals(need, response.getBody());
    }
+
+   @Test
+   public void testUpdateNeedFailed() throws IOException {
+        Need need = new Need(99,"Galactic Agent");
+        when(mockCupboardDAO.updateNeed(need)).thenReturn(null);
+        ResponseEntity<Need> response = userController.updateNeed(need);
+        assertEquals(HttpStatus.OK,response.getStatusCode());
+    }
+   @Test
+   public void testUpdateNeedHandleException() throws IOException { 
+        Need need = new Need(99,"Galactic Agent");
+        doThrow(new IOException()).when(mockCupboardDAO).updateNeed(need);
+        ResponseEntity<Need> response = userController.updateNeed(need);
+        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR,response.getStatusCode());
+    }
+   @Test
+   public void testGetNeeds() throws IOException {
+        Need[] need = new Need[2];
+        need[0] = new Need(1,"Bolt");
+        need[1] = new Need(2,"The Great Iguana");
+        when(mockCupboardDAO.getNeeds()).thenReturn(need);
+        ResponseEntity<Need[]> response = userController.getNeeds();
+        assertEquals(HttpStatus.OK,response.getStatusCode());
+    }
 }
 
