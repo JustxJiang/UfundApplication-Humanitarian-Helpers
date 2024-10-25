@@ -16,21 +16,30 @@ geometry: margin=1in
   * Kelly Garcia
   * Jordan Ciferni
   * Justen Jiang
+  * Nick Fennelly
 
 ## Executive Summary
 
 This project is to make software that will assist the humanitarian and pets charity with their work collecting donations and other useful codes.
 
 ### Purpose
->  _**[Sprint 2 & 4]** Provide a very brief statement about the project and the most
-> important user group and user goals._
+> _**[Sprint 2 & 4]** Provide a very brief statement about the project and the most important user group and user goals._
+
+The purpose of this website is to develop a humanitarian website that supports pet owners and animal shelters by fulfilling their needs financially.
+(Macca, Jordan)
 
 ### Glossary and Acronyms
 > _**[Sprint 2 & 4]** Provide a table of terms and acronyms._
 
 | Term | Definition |
 |------|------------|
-| SPA | Single Page |
+| API | Application Programming Interface - "A set of rules or protocols that enables software applications to communicate with each other to exchange data, features and functionality" -[IBM](https://www.ibm.com/topics/api#What+is+an+API%3F) |
+| DAO | Data Access Object - An outline for developers in order to access persistent data in a simple and secure manner. |
+| Unit Test | A small portion of the program tested with different scenarios in order to confirm its functionality. |
+| Persistent Data | Data about the program stored in a file. |
+| User Story | A scenario depecting a certain function that must be implemented into the program. |
+
+(Jordan)
 
 
 ## Requirements
@@ -43,6 +52,8 @@ This section describes the features of the application.
 
 ### Definition of MVP
 > _**[Sprint 2 & 4]** Provide a simple description of the Minimum Viable Product._
+A barebones version of the finished application that has enough functionality to be tested by users for the purpose of feedback.
+(Kelly, Jordan)
 
 ### MVP Features
 >  _**[Sprint 4]** Provide a list of top-level Epics and/or Stories of the MVP._
@@ -55,7 +66,7 @@ This section describes the features of the application.
 
 This section describes the application domain.
 
-![Domain Model](domain-model-placeholder.png)
+![Domain Model](domain-model.png)
 
 > _**[Sprint 2 & 4]** Provide a high-level overview of the domain for this application. You
 > can discuss the more important domain entities and their relationship
