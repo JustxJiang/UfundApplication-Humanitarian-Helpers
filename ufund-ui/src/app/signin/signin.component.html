@@ -1,3 +1,39 @@
 <section class = "container">
-    <form class = "form" #form = "ngForm"></form>
+    <form class = "form" #form = "ngForm">
+        <div class = "form_control">
+            <label for="username">Username: </label>
+            <input type="text" id = "username" placeholder="Enter Username..." [(ngModel)]="newuser.name" name = "userName" #name = "ngModel" change = "displaylog(name)" required minlength = "3" maxlength ="20">
+            <!-- Error message -->
+             <div class = "validMsg" *ngIf="!name.valid && name.touched">
+                <p *ngIf = "name.errors?.['required']">Name is required!</p>
+                <p *ngIf = "name.errors?.['minlength']">Name must be at least 2 characters</p>
+             </div>
+        </div>
+
+
+        <!-- collect email -->
+        <div class = "form_control">
+            <label for="email">Email address: </label>
+            <input type="email" id = "email" placeholder = "Type email address" [(ngModel)] = "newuser.email" name = "userEmail" #email = 'ngModel' required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                
+            <!-- Error message -->
+            <div class = "validMsg" *ngIf="!email.valid && email.touched">
+                    <p *ngIf = "email.errors?.['required']">Email is required!</p>
+                    <p *ngIf = "email.errors?.['email']">Invalid email address format!</p>                
+                </div>
+        </div>
+
+        <div class = "form_control">
+            <label for="password">Password: </label>
+            <input type="text" id = "username" placeholder="Enter Password..." name = "userName">
+        </div>
+
+
+
+        <!-- submit button -->
+        <div class = "formcontrol">
+            <button type = "submit" class = "btnsubmit" [disabled] = "formSubmit && form.invalid">Submit</button>
+        </div>
+        
+    </form>
 </section>

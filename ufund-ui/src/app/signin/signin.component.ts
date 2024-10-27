@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import UserController}
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -9,11 +10,10 @@ import { NgForm } from '@angular/forms';
 export class SigninComponent {
   
 
-  formsubmit:boolean = false;
+  formSubmit:boolean = false;
   // submitting form 
   submitForm(form:NgForm){
-    this.formsubmit = true;
-    if(form.valid){
-    }
+    this.formSubmit = true
+
   }
 }
