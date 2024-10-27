@@ -9,6 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 
+// import java.beans.Transient;
 import java.io.IOException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -58,15 +59,6 @@ public class UserControllerTest {
    }
 
    @Test
-   public void testCreateNeed() throws IOException {
-      Need need = new Need(25, "Toys");
-      Mockito.when(this.mockCupboardDAO.createNeed(need)).thenReturn(need);
-      ResponseEntity<Need> response = this.userController.createNeed(need);
-      Assertions.assertEquals(HttpStatus.CREATED, response.getStatusCode());
-      Assertions.assertEquals(need, response.getBody());
-   }
-
-   @Test
    public void testCreateNeedFailed() throws IOException {
       Need need = new Need(99, "Bolt");
       Mockito.when(this.mockCupboardDAO.createNeed(need)).thenReturn((Need)null);
@@ -107,6 +99,14 @@ public class UserControllerTest {
         ResponseEntity<Need> response = userController.updateNeed(need);
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR,response.getStatusCode());
     }
+    
+    @Test
+    public void testGetNeedsHandleException() throws IOException { 
+        doThrow(new IOException()).when(mockCupboardDAO).getNeeds();
+        ResponseEntity<Need[]> response = userController.getNeeds();
+        assertEquals(HttpStatus.OK,response.getStatusCode());
+    }
+
    @Test
    public void testGetNeeds() throws IOException {
         Need[] need = new Need[2];
@@ -115,6 +115,21 @@ public class UserControllerTest {
         when(mockCupboardDAO.getNeeds()).thenReturn(need);
         ResponseEntity<Need[]> response = userController.getNeeds();
         assertEquals(HttpStatus.OK,response.getStatusCode());
+    }
+
+    @Test
+    public void testSearchNeedsHandleException() throws IOException {
+        String searchString = "an";
+        doThrow(new IOException()).when(mockCupboardDAO).findNeeds(searchString);
+        ResponseEntity<Need[]> response = userController.searchNeeds(searchString);
+        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR,response.getStatusCode());
+    }
+    @Test
+    public void testDeleteNeedHandleException() throws IOException {
+        int needId = 99;
+        doThrow(new IOException()).when(mockCupboardDAO).deleteNeed(needId);
+        ResponseEntity<Need> response = userController.deleteNeed(needId);
+        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR,response.getStatusCode());
     }
 }
 

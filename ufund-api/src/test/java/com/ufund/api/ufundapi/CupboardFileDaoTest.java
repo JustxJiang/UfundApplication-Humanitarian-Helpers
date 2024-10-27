@@ -75,5 +75,6 @@ public class CupboardFileDaoTest {
         assertEquals(heroes[0],testHeroes[1]);
         assertEquals(heroes[1],testHeroes[2]);
     }
+    
 
 }
