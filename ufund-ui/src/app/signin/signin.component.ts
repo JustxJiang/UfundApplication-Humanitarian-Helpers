@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
-import UserController}
-import { NgForm } from '@angular/forms';
+import {FormsModule, NgForm} from '@angular/forms'
 
 @Component({
   selector: 'app-signin',
+  standalone: true,
+  imports:[],
   templateUrl: './signin.component.html',
   styleUrls: ['./signin.component.css']
 })
