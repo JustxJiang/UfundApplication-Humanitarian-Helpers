@@ -7,19 +7,13 @@
 h1{
     font-weight: bolder;
     font-size:1.5em;
-}
-/*whole page alterations add background art when finished*/
-body{
-    width:100%;
-    height:100vh;
-    background-color: #FCFCFC;
-    margin-left:auto;
-    margin-right:auto;
+    text-align: center;
 }
 
-header{
-    width:70%;
+.title{
+    text-align: center;
 }
+
 main{
     width:70%;
     margin:2em;
@@ -29,9 +23,7 @@ main{
 .links{
     display:grid;
 }
-nav{
-    position: relative;
-}
+
 footer{
     background-color: red;
     min-height:10%;

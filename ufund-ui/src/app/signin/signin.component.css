@@ -1,15 +1,17 @@
 .container{
-    max-width: 400px;
+    max-width: 600px;
     margin: 8em auto;
     padding: 1em;
-    background-color: lightblue;
+    background-color: #668F80;
     border-radius: 5px;
     border: 2px solid black;
+    height: 60vh;
 }
 
 .form{
     display: flex;
     flex-direction: column;
+    padding: 1rem;
 }
 
 .signin_title{
@@ -19,11 +21,16 @@
 
 .form_name{
     font-weight: bold;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
     margin-left: -0.8rem;
 }
 .form_control{
     padding: 0.8rem;
+}
+
+.input{
+    background-color: #FCFCFC;
+    border-radius: 0px;
 }
 
 .form_control:last-child{
