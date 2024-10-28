@@ -5,7 +5,7 @@
     background-color: #668F80;
     border-radius: 5px;
     border: 2px solid black;
-    height: 60vh;
+    height: 50vh;
 }
 
 .form{
@@ -16,7 +16,7 @@
 
 .signin_title{
     text-align: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .form_name{
@@ -26,14 +26,36 @@
 }
 .form_control{
     padding: 0.8rem;
-}
-
-.input{
-    background-color: #FCFCFC;
-    border-radius: 0px;
+    margin-bottom: 2px;
 }
 
 .form_control:last-child{
     text-align: center;
     margin-top: 0.5rem;
+}
+
+.show{
+    width: 50px;
+    margin-left: 90%;
+    border: none;
+    color: #FCFCFC;
+    font-weight: bold;
+}
+
+.btnsubmit{
+    background-color: #4B4A67;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    width: 60%;
+    height: 3rem;
+    margin-top: 5px;
+    color: white;
+}
+
+.btnsubmit:hover{
+    background-color: #FCFCFC;
+    color: black;
+    box-shadow: 0px 0px 0px 2px gray;
+    font-weight: bold;
 }

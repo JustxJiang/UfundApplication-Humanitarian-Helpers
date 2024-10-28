@@ -9,12 +9,15 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent {
-  
+  password : string = '';
+  showPassword:boolean = false;
 
+  togglePasswordVisbility():void{
+    this.showPassword = !this.showPassword;
+  }
   formSubmit:boolean = false;
   // submitting form 
   submitForm(form:NgForm){
     this.formSubmit = true
-
   }
 }
