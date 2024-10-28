@@ -37,3 +37,8 @@ footer{
     min-height:10%;
     width:100vw;
 }
+
+.icon{
+    height: 50%;
+    width: 50%;
+}

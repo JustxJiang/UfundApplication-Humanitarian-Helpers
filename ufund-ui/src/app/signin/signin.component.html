@@ -1,26 +1,22 @@
 <section class = "container">
     <form class = "form">
-        <div class = "form_control">
-            <label for="username">Username: </label>
-            <input type="text" id = "username" placeholder="Enter Username..." required minlength = "3" maxlength ="20">
+        <h2 class = "signin_title">Sign in</h2>
+        <!-- email -->
+        <div class = "form_control form-control-lg row">
+            <p class="form_name">Your email</p>
+            <input type="email" id = "email" placeholder = "e.g. bobthebuilder@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
         </div>
 
-
-        <!-- collect email -->
-        <div class = "form_control">
-            <label for="email">Email address: </label>
-            <input type="email" id = "email" placeholder = "Type email address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-        </div>
-
-        <div class = "form_control">
-            <label for="password">Password: </label>
-            <input type="text" id = "username" placeholder="Enter Password..." name = "userName">
+        <!-- password -->
+        <div class = "form_control form-control-lg row">
+            <p class = "form_name">Your Password</p>
+            <input type="password" id = "password" placeholder="e.g. thisismypass101" name = "password">
         </div>
 
 
 
         <!-- submit button -->
-        <div class = "formcontrol">
+        <div class = "form_control">
             <button type = "submit" class = "btnsubmit" [disabled] = "formSubmit">Submit</button>
         </div>
         
