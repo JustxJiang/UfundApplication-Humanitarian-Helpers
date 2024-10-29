@@ -10,22 +10,38 @@ h1{
     text-align: center;
 }
 
+.mt-4{
+    display:flow;
+}
 .title{
     text-align: center;
+    margin:5em;
 }
 
 main{
-    width:70%;
+    width:70em;
     margin:2em;
     display: grid;
-    align-self:center;
+    justify-self:center;
+    grid-template-columns: 40em 20em;
+    grid-template-rows: 8fr 2fr;
+    grid-template-areas:    "page links" 
+                            "page image";
 }
 .links{
     display:grid;
 }
-
+ul.links{
+    grid-area: links;
+}
+img{
+    grid-area: image;
+}
+.body{
+    grid-area: page;
+}
 footer{
-    background-color: red;
-    min-height:10%;
+    background-color: #4b4a67;
+    min: height 10em;;
     width:100vw;
 }
