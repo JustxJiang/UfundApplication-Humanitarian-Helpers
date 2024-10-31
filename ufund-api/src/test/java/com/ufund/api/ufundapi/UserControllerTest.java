@@ -131,5 +131,15 @@ public class UserControllerTest {
         ResponseEntity<Need> response = userController.deleteNeed(needId);
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR,response.getStatusCode());
     }
+
+    @Test
+    public void testDeleteNeed() throws IOException{
+
+    }
+
+    @Test 
+    public void testSearchNeed() throws IOException{
+
+    }
 }
 
