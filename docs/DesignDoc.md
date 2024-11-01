@@ -6,7 +6,7 @@ geometry: margin=1in
 > _The following template provides the headings for your Design
 > Documentation.  As you edit each section make sure you remove these
 > commentary 'blockquotes'; the lines that start with a > character
-> and appear in the generated PDF in italics but do so only **after** all team members agree that the requirements for that section and current Sprint have been met. **Do not** delete future Sprint expectations._
+> and appear in the generated PDF in italics but do so only **after** all team members agree that the requirements for that section and current Sprint have been met. **Do not** delete future Sprint expectations_
 
 ## Team Information
 * Team name: TeamAxiom
@@ -25,6 +25,7 @@ This project is to make software that will assist the humanitarian and pets char
 ### Purpose
 > _**[Sprint 2 & 4]** Provide a very brief statement about the project and the most important user group and user goals._
 
+#### Pawsitive Connections
 The purpose of this website is to develop a humanitarian website that supports pet owners and animal shelters by fulfilling their needs financially.
 (Macca, Jordan)
 
@@ -38,9 +39,7 @@ The purpose of this website is to develop a humanitarian website that supports p
 | Unit Test | A small portion of the program tested with different scenarios in order to confirm its functionality. |
 | Persistent Data | Data about the program stored in a file. |
 | User Story | A scenario depecting a certain function that must be implemented into the program. |
-
 (Jordan)
-
 
 ## Requirements
 
@@ -72,6 +71,16 @@ This section describes the application domain.
 > can discuss the more important domain entities and their relationship
 > to each other._
 
+| Class | Definition | Relations |
+|-------|------------|-----------|
+| User | An account on the Pawsitive Connections website |  |
+| Helper | A general type of user that uses the website for the purpose of providing donations | Helpers make <u>Donations</u>, Helpers edit and remove needs from their <u>Donation Basket |
+| Admin | An administrative type of user that can manage the website as they see fit | Admins manage the need <u> Cupboard |
+| Donation | Stores the information about the needed donation, such as what the product is, and the quanitity of the product needed | Donations go to <u>Shelters/Domesticated Animals</u>, Donations are stored in the <u>Donation Basket</u> |
+| Donation Basket | Stores the Donations selected by the Helpers | Donations in the basket go to fulfilling <u>Needs</u> |
+| Cupboad | Stores needs on the website that can be selected by Helpers or edited by Admins |  |
+| Need | Donation items required by Shelters/Domesticated Animals | Needs are stored in the <u>Cupboard</u> |
+| Shelters/Domesticated Animals | The organizations and/or individual animals that require items in the form of donation |  |
 
 ## Architecture and Design
 
@@ -181,3 +190,7 @@ This section describes the web interface flow; this is how the user views and in
 
 ## Ongoing Rationale
 >_**[Sprint 1, 2, 3 & 4]** Throughout the project, provide a time stamp **(yyyy/mm/dd): Sprint # and description** of any _**mayor**_ team decisions or design milestones/changes and corresponding justification._
+
+Sprint 1:
+
+Sprint 2:
