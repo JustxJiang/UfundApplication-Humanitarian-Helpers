@@ -1,23 +1,22 @@
 package com.ufund.api.ufundapi;
 
 
-import com.ufund.api.controller.UserController;
-import com.ufund.api.model.Need;
-import com.ufund.api.persistence.CupboardDAO;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.doThrow;
-import static org.mockito.Mockito.when;
-
-// import java.beans.Transient;
 import java.io.IOException;
+
 import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
+import static org.mockito.Mockito.doThrow;
+import static org.mockito.Mockito.when;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+
+import com.ufund.api.controller.UserController;
+import com.ufund.api.model.Need;
+import com.ufund.api.persistence.CupboardDAO;
 
 @Tag("Controller-tier")
 public class UserControllerTest {
@@ -134,12 +133,24 @@ public class UserControllerTest {
 
     @Test
     public void testDeleteNeed() throws IOException{
-
+        Need need = new Need(99, "testNeed");
+        Need[] needs = new Need[]{need};
+        Mockito.when(this.mockCupboardDAO.getNeeds()).thenReturn(needs);
+        Mockito.when(this.mockCupboardDAO.deleteNeed(need.getId())).thenReturn(true);
+        ResponseEntity<Need> response = this.userController.deleteNeed(need.getId());
+        assertEquals(HttpStatus.OK,response.getStatusCode());
     }
 
     @Test 
     public void testSearchNeed() throws IOException{
-
+        String name = "testNeed";
+        Need need = new Need(99, name);
+        Need[] needs = new Need[]{need};
+        Mockito.when(this.mockCupboardDAO.getNeeds()).thenReturn(needs);
+        ResponseEntity<Need[]> response = this.userController.searchNeeds(name);
+        assertEquals(HttpStatus.OK,response.getStatusCode());
+        assertEquals(1,response.getBody().length);
+        assertEquals(need,response.getBody()[0]);
     }
 }
 
