@@ -1,1 +1,14 @@
-<p>cupboard works!</p>
+<h2>Cupboard</h2>
+
+<div>
+  <input [(ngModel)]="newNeed.name" placeholder="Need name" />
+  <input [(ngModel)]="newNeed.quantity" type="number" min="1" placeholder="Quantity" />
+  <button (click)="addNeed()">Add Need</button>
+</div>
+
+<ul>
+  <li *ngFor="let need of needs">
+    {{ need.name }} - Quantity: {{ need.quantity }}
+    <button (click)="deleteNeed(need.id)">Delete</button>
+  </li>
+</ul>
