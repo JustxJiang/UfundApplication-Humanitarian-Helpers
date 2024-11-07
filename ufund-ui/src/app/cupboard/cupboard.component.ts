@@ -3,7 +3,7 @@ import {Need} from '../need'
 import { NeedService } from '../need.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-// import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-cupboard',
@@ -11,16 +11,15 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule,FormsModule],
   templateUrl: './cupboard.component.html',
   styleUrl: './cupboard.component.css',
-  providers: [NeedService,]
-  // HttpClient
-
+  providers: [NeedService, HttpClient]
+  
 })
 export class CupboardComponent implements OnInit{
   needs: Need[] = [];
   newNeed : Need = {id: 0, name: '', quantity: 0};
 
-  // private http: HttpClient
-  constructor(private needService: NeedService){
+  
+  constructor(private needService: NeedService, private http: HttpClient){
 
   }
 
