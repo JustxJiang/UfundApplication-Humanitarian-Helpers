@@ -134,9 +134,6 @@ Both the ViewModel and Model are built using Java and Spring Framework. Details 
 
 This section describes the web interface flow; this is how the user views and interacts with the web application.
 
-> _Provide a summary of the application's user interface.  Describe, from the user's perspective, the flow of the pages in the web application._
-
-
 ### View Tier
 > _**[Sprint 4]** Provide a summary of the View Tier UI of your architecture.
 > Describe the types of components in the tier and describe their
@@ -156,7 +153,6 @@ This section describes the web interface flow; this is how the user views and in
  >* _Include other details such as attributes and method signatures that you think are needed to support the level of detail in your discussion._
 
 ### ViewModel Tier
-> _**[Sprint 1]** List the classes supporting this tier and provide a description of there purpose._
 
 The classes supporting the uFundAPI are found in the UserController class. The UserController houses five methods to support it.
 
@@ -177,7 +173,6 @@ The classes supporting the uFundAPI are found in the UserController class. The U
 ![Replace with your ViewModel Tier class diagram 1, etc.](model-placeholder.png)
 
 ### Model Tier
-> _**[Sprint 1]** List the classes supporting this tier and provide a description of there purpose._
 
 We use the Need class to interact with various needs, as in when a need has to be updated or created. The ID can be found by calling on it using methods from this class.
 
@@ -187,6 +182,8 @@ The CupboardDAO and CupboardFileDAO classes are used to interact with the cupboa
 > section will follow the same instructions that are given for the View
 > Tier above._
 
+Throughout Sprint 2 we worked on implementing this logic into the UI application that the user will interact with. In this sense, the methods that were mentioned previously were recreated in such a way that became much more user friendly so that helpers/managers that attempt to interact with the cupboard will not have to use cURL commands to retrieve information.
+
 > _At appropriate places as part of this narrative provide **one** or more updated and **properly labeled**
 > static models (UML class diagrams) with some details such as associations (connections) between classes, and critical attributes and methods. (**Be sure** to revisit the Static **UML Review Sheet** to ensure your class diagrams are using correct format and syntax.)_
 > 
@@ -195,6 +192,8 @@ The CupboardDAO and CupboardFileDAO classes are used to interact with the cupboa
 ## OO Design Principles
 
 > _**[Sprint 1]** Name and describe the initial OO Principles that your team has considered in support of your design (and implementation) for this first Sprint._
+
+We have worked to implement single responsibility and low coupling into our project. This way, our classes only have one purpose in the project and do not become too overburdened. Our hope is to have a fluid program that has many moving parts, but work in high cohesion. As for low coupling, we have worked to ensure that we are not accessing classes unnecessarily to achieve a similar goal. We have refactored our project for this purpose.
 
 > _**[Sprint 2, 3 & 4]** Will eventually address upto **4 key OO Principles** in your final design. Follow guidance in augmenting those completed in previous Sprints as indicated to you by instructor. Be sure to include any diagrams (or clearly refer to ones elsewhere in your Tier sections above) to support your claims._
 
@@ -219,6 +218,17 @@ The CupboardDAO and CupboardFileDAO classes are used to interact with the cupboa
 > have not had any testing yet. Highlight the issues found during
 > acceptance testing and if there are any concerns._
 
+| User Type | Story |
+|------|------------|
+| Get a  Need | Passed testing, user story has been successfully implemented. |
+| Get all Needs | Passed testing, user story has been successfully implemented. |
+| Create a new Need | Passed testing, user story has been successfully implemented. |
+| Update a Need | Passed testing, user story has been successfully implemented. |
+| Delete a Need | Passed testing, user story has been successfully implemented. |
+| Search for a Need | Passed testing, user story has been successfully implemented. |
+| Login Page | Passed testing, user story has been successfully implemented. |
+| Website Front Page | Passed testing, user story has been successfully implemented. |
+
 ### Unit Testing and Code Coverage
 > _**[Sprint 4]** Discuss your unit testing strategy. Report on the code coverage
 > achieved from unit testing of the code base. Discuss the team's
@@ -227,6 +237,14 @@ The CupboardDAO and CupboardFileDAO classes are used to interact with the cupboa
 
 >_**[Sprint 2, 3 & 4]** **Include images of your code coverage report.** If there are any anomalies, discuss
 > those._
+
+![Sprint 2 Code Coverage](codecoverage.png)
+
+Sprint 2:
+
+>As of right now, our code coverage is rather lack luster. We have not been able to setup many tests for our current web application, hence the 0% coverage checks on the UI.
+
+>On the contrary, our backend application has a higher score but not an optimal one, around 70%. We will work on improving this score to create a more cohesive application.
 
 ## Ongoing Rationale
 >_**[Sprint 1, 2, 3 & 4]** Throughout the project, provide a time stamp **(yyyy/mm/dd): Sprint # and description** of any _**mayor**_ team decisions or design milestones/changes and corresponding justification._
