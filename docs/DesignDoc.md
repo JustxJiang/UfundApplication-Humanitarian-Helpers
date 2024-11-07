@@ -167,10 +167,6 @@ The classes supporting the uFundAPI are found in the UserController class. The U
 5. updateNeed() - Updates an existing need using data passed through by the user/developer.
 6. deleteNeed() - Deletes a need using the passed through ID.
 
-We also use the Need class to interact with various needs, as in when a need has to be updated or created. The ID can be found by calling on it using methods from this class.
-
-The CupboardDAO and CupboardFileDAO classes are used to interact with the cupboard found in a respectively named JSON file. These files will interpret the data and return it to the developer attempting to access this data. It is a means of persistence when updating/creating/deleting data.
-
 > _**[Sprint 4]** Provide a summary of this tier of your architecture. This
 > section will follow the same instructions that are given for the View
 > Tier above._
@@ -182,6 +178,10 @@ The CupboardDAO and CupboardFileDAO classes are used to interact with the cupboa
 
 ### Model Tier
 > _**[Sprint 1]** List the classes supporting this tier and provide a description of there purpose._
+
+We use the Need class to interact with various needs, as in when a need has to be updated or created. The ID can be found by calling on it using methods from this class.
+
+The CupboardDAO and CupboardFileDAO classes are used to interact with the cupboard found in a respectively named JSON file. These files will interpret the data and return it to the developer attempting to access this data. It is a means of persistence when updating/creating/deleting data.
 
 > _**[Sprint 2, 3 & 4]** Provide a summary of this tier of your architecture. This
 > section will follow the same instructions that are given for the View
