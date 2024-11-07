@@ -71,7 +71,7 @@ This section describes the features of the application.
 | AS A helper | I WANT to be able to login to the website SO THAT I can make changes to my cart and fund various causes. |
 | AS A helper | I WANT to be able to search to the website SO THAT I can find new causes to support. |
 | AS A helper | I WANT to be able to login to the website SO THAT I can make changes to my cart and fund various causes. |
-|AS A helper I WANT to be able to fund different causes that are in my cart SO THAT I can checkout when I am finished browsing.
+| AS A helper | I WANT to be able to fund different causes that are in my cart SO THAT I can checkout when I am finished browsing. |
 | AS A helper | I WANT to be able to create an account on the website SO THAT I can donate to various causes. |
 | AS A helper | I WANT to be able to view causes that I have previously donated to SO THAT I may be able to donate to them again in the future. |
 | AS A manager | I WANT to be able to login to the website SO THAT I can make changes to various needs/causes SO THAT I can keep each cause on track. |
