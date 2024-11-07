@@ -4,14 +4,14 @@ import { HomeComponent } from './home/home.component';
 import { CupboardComponent } from './cupboard/cupboard.component';
 import { RouterModule} from '@angular/router';
 import { CommonModule } from '@angular/common';
-
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   standalone : true,
-  imports: [CommonModule, SigninComponent,HomeComponent, CupboardComponent, RouterModule],
+  imports: [HttpClient, CommonModule, SigninComponent,HomeComponent, CupboardComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent { 
   title = 'ufund-ui';
 }

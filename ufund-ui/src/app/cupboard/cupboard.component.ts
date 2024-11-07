@@ -3,12 +3,13 @@ import {Need} from '../need'
 import { NeedService } from '../need.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @Component({
   selector: 'app-cupboard',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule, HttpClientModule],
   templateUrl: './cupboard.component.html',
   styleUrl: './cupboard.component.css',
   providers: [NeedService]

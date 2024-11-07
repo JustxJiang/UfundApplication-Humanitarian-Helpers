@@ -11,3 +11,6 @@ export const routes: Routes = [
   {path: 'forgotpassword', component: ForgotpasswordComponent},
   {path: '', redirectTo: '/app', pathMatch: 'full'},
 ];
+
+
+  
