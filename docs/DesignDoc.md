@@ -3,11 +3,6 @@ geometry: margin=1in
 ---
 # PROJECT Design Documentation
 
-> _The following template provides the headings for your Design
-> Documentation.  As you edit each section make sure you remove these
-> commentary 'blockquotes'; the lines that start with a > character
-> and appear in the generated PDF in italics but do so only **after** all team members agree that the requirements for that section and current Sprint have been met. **Do not** delete future Sprint expectations_
-
 ## Team Information
 * Team name: TeamAxiom
 * Team members
@@ -20,14 +15,14 @@ geometry: margin=1in
 
 ## Executive Summary
 
-This project is to make software that will assist the humanitarian and pets charity with their work collecting donations and other useful codes.
+This project is focused on making software that will assist various humanitarian and pet charities by collecting donations from crowdsourced supporters. All donations are voluntary.
 
 ### Purpose
 > _**[Sprint 2 & 4]** Provide a very brief statement about the project and the most important user group and user goals._
 
 #### Pawsitive Connections
-The purpose of this website is to develop a humanitarian website that supports pet owners and animal shelters by fulfilling their needs financially.
-(Macca, Jordan)
+The purpose of this website is to develop a humanitarian website that supports pet owners and animal shelters by fulfilling their needs financially. Donations of all kinds are accepted, whether it be monetary or physical items.
+(Macca, Jordan, Nick)
 
 ### Glossary and Acronyms
 > _**[Sprint 2 & 4]** Provide a table of terms and acronyms._
@@ -78,9 +73,13 @@ This section describes the features of the application.
 | Updated by: | Nick |
 
 ### Definition of MVP
-> _**[Sprint 2 & 4]** Provide a simple description of the Minimum Viable Product._
 A barebones version of the finished application that has enough functionality to be tested by users for the purpose of feedback.
-(Kelly, Jordan)
+
+In our case, the MVP should contain enough functionality to login, be able to view various different causes, add items to a cart, and checkout. Managers should also be able to access a cupboard that contains items currently in stock, and update these as necessary.
+
+As a layer of protection, all usernames and passwords will be unique and stored on our server.
+
+(Kelly, Jordan, Nick)
 
 ### MVP Features
 >  _**[Sprint 4]** Provide a list of top-level Epics and/or Stories of the MVP._
