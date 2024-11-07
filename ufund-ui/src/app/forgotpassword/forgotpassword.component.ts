@@ -8,7 +8,7 @@ import { NgIf } from '@angular/common';
   standalone: true,
   imports: [ReactiveFormsModule,NgIf],
   templateUrl: './forgotpassword.component.html',
-  styleUrl: './forgotpassword.component.css'
+  styleUrls: ['./forgotpassword.component.css']
 })
 export class ForgotpasswordComponent {
   restPasswordForm!: FormGroup;
