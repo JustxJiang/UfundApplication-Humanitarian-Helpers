@@ -3,7 +3,6 @@ import {Need} from '../need'
 import { NeedService } from '../need.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -12,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
   imports: [CommonModule,FormsModule],
   templateUrl: './cupboard.component.html',
   styleUrl: './cupboard.component.css',
-  providers: [NeedService, HttpClient]
+  providers: [NeedService]
   
 })
 export class CupboardComponent implements OnInit{
@@ -20,7 +19,7 @@ export class CupboardComponent implements OnInit{
   newNeed : Need = {id: 0, name: '', quantity: 0};
 
   
-  constructor(private needService: NeedService, private http: HttpClient){
+  constructor(private needService: NeedService){
 
   }
 
