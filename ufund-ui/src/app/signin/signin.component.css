@@ -59,3 +59,9 @@
     box-shadow: 0px 0px 0px 2px gray;
     font-weight: bold;
 }
+
+.bottom_links{
+    text-decoration: underline;
+    color: #4B4A67;
+    font-weight: bold;
+}
