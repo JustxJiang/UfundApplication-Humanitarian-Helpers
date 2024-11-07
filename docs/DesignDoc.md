@@ -249,6 +249,5 @@ Sprint 2:
 ## Ongoing Rationale
 >_**[Sprint 1, 2, 3 & 4]** Throughout the project, provide a time stamp **(yyyy/mm/dd): Sprint # and description** of any _**mayor**_ team decisions or design milestones/changes and corresponding justification._
 
-Sprint 1:
-
+Sprint 1: 
 Sprint 2:
