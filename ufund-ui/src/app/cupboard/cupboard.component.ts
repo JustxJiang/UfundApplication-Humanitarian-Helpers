@@ -42,6 +42,7 @@ export class CupboardComponent implements OnInit{
     }
   }
 
+  
   updateNeed(need: Need): void {
     this.needService.updateNeed(need).subscribe(() => {
       this.loadNeeds();
