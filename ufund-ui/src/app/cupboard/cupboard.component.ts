@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './cupboard.component.html',
   styleUrl: './cupboard.component.css',
   providers: [NeedService, HttpClient]
+  
 })
 export class CupboardComponent implements OnInit{
   needs: Need[] = [];
