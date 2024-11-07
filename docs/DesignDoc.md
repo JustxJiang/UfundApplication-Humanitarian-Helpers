@@ -162,6 +162,7 @@ The classes supporting the uFundAPI are found in the UserController class. The U
 4. createNeed() - Creates a new need with data input from the user/developer.
 5. updateNeed() - Updates an existing need using data passed through by the user/developer.
 6. deleteNeed() - Deletes a need using the passed through ID.
+Updated by Nick
 
 > _**[Sprint 4]** Provide a summary of this tier of your architecture. This
 > section will follow the same instructions that are given for the View
@@ -177,12 +178,14 @@ The classes supporting the uFundAPI are found in the UserController class. The U
 We use the Need class to interact with various needs, as in when a need has to be updated or created. The ID can be found by calling on it using methods from this class.
 
 The CupboardDAO and CupboardFileDAO classes are used to interact with the cupboard found in a respectively named JSON file. These files will interpret the data and return it to the developer attempting to access this data. It is a means of persistence when updating/creating/deleting data.
+Updated by Nick
 
 > _**[Sprint 2, 3 & 4]** Provide a summary of this tier of your architecture. This
 > section will follow the same instructions that are given for the View
 > Tier above._
 
 Throughout Sprint 2 we worked on implementing this logic into the UI application that the user will interact with. In this sense, the methods that were mentioned previously were recreated in such a way that became much more user friendly so that helpers/managers that attempt to interact with the cupboard will not have to use cURL commands to retrieve information.
+Updated by Nick
 
 > _At appropriate places as part of this narrative provide **one** or more updated and **properly labeled**
 > static models (UML class diagrams) with some details such as associations (connections) between classes, and critical attributes and methods. (**Be sure** to revisit the Static **UML Review Sheet** to ensure your class diagrams are using correct format and syntax.)_
@@ -194,6 +197,7 @@ Throughout Sprint 2 we worked on implementing this logic into the UI application
 > _**[Sprint 1]** Name and describe the initial OO Principles that your team has considered in support of your design (and implementation) for this first Sprint._
 
 We have worked to implement single responsibility and low coupling into our project. This way, our classes only have one purpose in the project and do not become too overburdened. Our hope is to have a fluid program that has many moving parts, but work in high cohesion. As for low coupling, we have worked to ensure that we are not accessing classes unnecessarily to achieve a similar goal. We have refactored our project for this purpose.
+Updated by Nick
 
 > _**[Sprint 2, 3 & 4]** Will eventually address upto **4 key OO Principles** in your final design. Follow guidance in augmenting those completed in previous Sprints as indicated to you by instructor. Be sure to include any diagrams (or clearly refer to ones elsewhere in your Tier sections above) to support your claims._
 
@@ -228,6 +232,7 @@ We have worked to implement single responsibility and low coupling into our proj
 | Search for a Need | Passed testing, user story has been successfully implemented. |
 | Login Page | Passed testing, user story has been successfully implemented. |
 | Website Front Page | Passed testing, user story has been successfully implemented. |
+| Updated by | Nick |
 
 ### Unit Testing and Code Coverage
 > _**[Sprint 4]** Discuss your unit testing strategy. Report on the code coverage
@@ -245,6 +250,8 @@ Sprint 2:
 >As of right now, our code coverage is rather lack luster. We have not been able to setup many tests for our current web application, hence the 0% coverage checks on the UI.
 
 >On the contrary, our backend application has a higher score but not an optimal one, around 70%. We will work on improving this score to create a more cohesive application.
+
+> Update by Nick
 
 ## Ongoing Rationale
 >_**[Sprint 1, 2, 3 & 4]** Throughout the project, provide a time stamp **(yyyy/mm/dd): Sprint # and description** of any _**mayor**_ team decisions or design milestones/changes and corresponding justification._
