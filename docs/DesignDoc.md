@@ -61,9 +61,33 @@ The purpose of this website is to develop a humanitarian website that supports p
 
 This section describes the features of the application.
 
-> _In this section you do not need to be exhaustive and list every
-> story.  Focus on top-level features from the Vision document and
-> maybe Epics and critical Stories._
+| User Type | Story |
+|------|------------|
+| AS A developer | I WANT to submit a request to get a single need SO THAT I can access the cost, quantity, and type. |
+
+| AS A developer | I WANT to submit a request to get all needs SO THAT I can access the cost, quantity, and type of all needs in the cupboard. |
+
+| AS A developer | I WANT to submit a request to update a single need SO THAT I can update the cost, quantity, and/or type. |
+
+| AS A developer | I WANT to submit a request to create a single need SO THAT I make new items with unique costs, quantities, and/or types |
+
+| AS A developer | I WANT to submit a request to delete a single need SO THAT I remove the data that contains the cost, quantity, and type. |
+
+| AS A helper | I WANT to be able to login to the website SO THAT I can make changes to my cart and fund various causes. |
+
+| AS A helper | I WANT to be able to search to the website SO THAT I can find new causes to support. |
+
+| AS A helper | I WANT to be able to login to the website SO THAT I can make changes to my cart and fund various causes. |
+
+|AS A helper I WANT to be able to fund different causes that are in my cart SO THAT I can checkout when I am finished browsing.
+
+| AS A helper | I WANT to be able to create an account on the website SO THAT I can donate to various causes. |
+
+| AS A helper | I WANT to be able to view causes that I have previously donated to SO THAT I may be able to donate to them again in the future. |
+
+| AS A manager | I WANT to be able to login to the website SO THAT I can make changes to various needs/causes SO THAT I can keep each cause on track. |
+
+| Updated by: | Nick |
 
 ### Definition of MVP
 > _**[Sprint 2 & 4]** Provide a simple description of the Minimum Viable Product._
