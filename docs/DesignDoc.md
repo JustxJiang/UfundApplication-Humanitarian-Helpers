@@ -3,11 +3,6 @@ geometry: margin=1in
 ---
 # PROJECT Design Documentation
 
-> _The following template provides the headings for your Design
-> Documentation.  As you edit each section make sure you remove these
-> commentary 'blockquotes'; the lines that start with a > character
-> and appear in the generated PDF in italics but do so only **after** all team members agree that the requirements for that section and current Sprint have been met. **Do not** delete future Sprint expectations_
-
 ## Team Information
 * Team name: TeamAxiom
 * Team members
@@ -20,14 +15,14 @@ geometry: margin=1in
 
 ## Executive Summary
 
-This project is to make software that will assist the humanitarian and pets charity with their work collecting donations and other useful codes.
+This project is focused on making software that will assist various humanitarian and pet charities by collecting donations from crowdsourced supporters. All donations are voluntary.
 
 ### Purpose
 > _**[Sprint 2 & 4]** Provide a very brief statement about the project and the most important user group and user goals._
 
 #### Pawsitive Connections
-The purpose of this website is to develop a humanitarian website that supports pet owners and animal shelters by fulfilling their needs financially.
-(Macca, Jordan)
+The purpose of this website is to develop a humanitarian website that supports pet owners and animal shelters by fulfilling their needs financially. Donations of all kinds are accepted, whether it be monetary or physical items.
+(Macca, Jordan, Nick)
 
 ### Glossary and Acronyms
 > _**[Sprint 2 & 4]** Provide a table of terms and acronyms._
@@ -61,14 +56,30 @@ The purpose of this website is to develop a humanitarian website that supports p
 
 This section describes the features of the application.
 
-> _In this section you do not need to be exhaustive and list every
-> story.  Focus on top-level features from the Vision document and
-> maybe Epics and critical Stories._
+| User Type | Story |
+|------|------------|
+| AS A developer | I WANT to submit a request to get a single need SO THAT I can access the cost, quantity, and type. |
+| AS A developer | I WANT to submit a request to get all needs SO THAT I can access the cost, quantity, and type of all needs in the cupboard. |
+| AS A developer | I WANT to submit a request to update a single need SO THAT I can update the cost, quantity, and/or type. |
+| AS A developer | I WANT to submit a request to create a single need SO THAT I make new items with unique costs, quantities, and/or types |
+| AS A developer | I WANT to submit a request to delete a single need SO THAT I remove the data that contains the cost, quantity, and type. |
+| AS A helper | I WANT to be able to login to the website SO THAT I can make changes to my cart and fund various causes. |
+| AS A helper | I WANT to be able to search to the website SO THAT I can find new causes to support. |
+| AS A helper | I WANT to be able to login to the website SO THAT I can make changes to my cart and fund various causes. |
+| AS A helper | I WANT to be able to fund different causes that are in my cart SO THAT I can checkout when I am finished browsing. |
+| AS A helper | I WANT to be able to create an account on the website SO THAT I can donate to various causes. |
+| AS A helper | I WANT to be able to view causes that I have previously donated to SO THAT I may be able to donate to them again in the future. |
+| AS A manager | I WANT to be able to login to the website SO THAT I can make changes to various needs/causes SO THAT I can keep each cause on track. |
+| Updated by: | Nick |
 
 ### Definition of MVP
-> _**[Sprint 2 & 4]** Provide a simple description of the Minimum Viable Product._
 A barebones version of the finished application that has enough functionality to be tested by users for the purpose of feedback.
-(Kelly, Jordan)
+
+In our case, the MVP should contain enough functionality to login, be able to view various different causes, add items to a cart, and checkout. Managers should also be able to access a cupboard that contains items currently in stock, and update these as necessary.
+
+As a layer of protection, all usernames and passwords will be unique and stored on our server.
+
+(Kelly, Jordan, Nick)
 
 ### MVP Features
 >  _**[Sprint 4]** Provide a list of top-level Epics and/or Stories of the MVP._
@@ -123,9 +134,6 @@ Both the ViewModel and Model are built using Java and Spring Framework. Details 
 
 This section describes the web interface flow; this is how the user views and interacts with the web application.
 
-> _Provide a summary of the application's user interface.  Describe, from the user's perspective, the flow of the pages in the web application._
-
-
 ### View Tier
 > _**[Sprint 4]** Provide a summary of the View Tier UI of your architecture.
 > Describe the types of components in the tier and describe their
@@ -145,7 +153,16 @@ This section describes the web interface flow; this is how the user views and in
  >* _Include other details such as attributes and method signatures that you think are needed to support the level of detail in your discussion._
 
 ### ViewModel Tier
-> _**[Sprint 1]** List the classes supporting this tier and provide a description of there purpose._
+
+The classes supporting the uFundAPI are found in the UserController class. The UserController houses five methods to support it.
+
+1. getNeed() - Retrieves a single need as input from the cupboard.
+2. getNeeds() - Retrieves a full list of all needs in the cupboard.
+3. searchNeeds() - Finds a need containing a substring as input by the user / developer.
+4. createNeed() - Creates a new need with data input from the user/developer.
+5. updateNeed() - Updates an existing need using data passed through by the user/developer.
+6. deleteNeed() - Deletes a need using the passed through ID.
+Updated by Nick
 
 > _**[Sprint 4]** Provide a summary of this tier of your architecture. This
 > section will follow the same instructions that are given for the View
@@ -157,11 +174,18 @@ This section describes the web interface flow; this is how the user views and in
 ![Replace with your ViewModel Tier class diagram 1, etc.](model-placeholder.png)
 
 ### Model Tier
-> _**[Sprint 1]** List the classes supporting this tier and provide a description of there purpose._
+
+We use the Need class to interact with various needs, as in when a need has to be updated or created. The ID can be found by calling on it using methods from this class.
+
+The CupboardDAO and CupboardFileDAO classes are used to interact with the cupboard found in a respectively named JSON file. These files will interpret the data and return it to the developer attempting to access this data. It is a means of persistence when updating/creating/deleting data.
+Updated by Nick
 
 > _**[Sprint 2, 3 & 4]** Provide a summary of this tier of your architecture. This
 > section will follow the same instructions that are given for the View
 > Tier above._
+
+Throughout Sprint 2 we worked on implementing this logic into the UI application that the user will interact with. In this sense, the methods that were mentioned previously were recreated in such a way that became much more user friendly so that helpers/managers that attempt to interact with the cupboard will not have to use cURL commands to retrieve information.
+Updated by Nick
 
 > _At appropriate places as part of this narrative provide **one** or more updated and **properly labeled**
 > static models (UML class diagrams) with some details such as associations (connections) between classes, and critical attributes and methods. (**Be sure** to revisit the Static **UML Review Sheet** to ensure your class diagrams are using correct format and syntax.)_
@@ -171,6 +195,9 @@ This section describes the web interface flow; this is how the user views and in
 ## OO Design Principles
 
 > _**[Sprint 1]** Name and describe the initial OO Principles that your team has considered in support of your design (and implementation) for this first Sprint._
+
+We have worked to implement single responsibility and low coupling into our project. This way, our classes only have one purpose in the project and do not become too overburdened. Our hope is to have a fluid program that has many moving parts, but work in high cohesion. As for low coupling, we have worked to ensure that we are not accessing classes unnecessarily to achieve a similar goal. We have refactored our project for this purpose.
+Updated by Nick
 
 > _**[Sprint 2, 3 & 4]** Will eventually address upto **4 key OO Principles** in your final design. Follow guidance in augmenting those completed in previous Sprints as indicated to you by instructor. Be sure to include any diagrams (or clearly refer to ones elsewhere in your Tier sections above) to support your claims._
 
@@ -195,6 +222,18 @@ This section describes the web interface flow; this is how the user views and in
 > have not had any testing yet. Highlight the issues found during
 > acceptance testing and if there are any concerns._
 
+| User Type | Story |
+|------|------------|
+| Get a  Need | Passed testing, user story has been successfully implemented. |
+| Get all Needs | Passed testing, user story has been successfully implemented. |
+| Create a new Need | Passed testing, user story has been successfully implemented. |
+| Update a Need | Passed testing, user story has been successfully implemented. |
+| Delete a Need | Passed testing, user story has been successfully implemented. |
+| Search for a Need | Passed testing, user story has been successfully implemented. |
+| Login Page | Passed testing, user story has been successfully implemented. |
+| Website Front Page | Passed testing, user story has been successfully implemented. |
+| Updated by | Nick |
+
 ### Unit Testing and Code Coverage
 > _**[Sprint 4]** Discuss your unit testing strategy. Report on the code coverage
 > achieved from unit testing of the code base. Discuss the team's
@@ -204,9 +243,18 @@ This section describes the web interface flow; this is how the user views and in
 >_**[Sprint 2, 3 & 4]** **Include images of your code coverage report.** If there are any anomalies, discuss
 > those._
 
+![Sprint 2 Code Coverage](codecoverage.png)
+
+Sprint 2:
+
+>As of right now, our code coverage is rather lack luster. We have not been able to setup many tests for our current web application, hence the 0% coverage checks on the UI.
+
+>On the contrary, our backend application has a higher score but not an optimal one, around 70%. We will work on improving this score to create a more cohesive application.
+
+> Update by Nick
+
 ## Ongoing Rationale
 >_**[Sprint 1, 2, 3 & 4]** Throughout the project, provide a time stamp **(yyyy/mm/dd): Sprint # and description** of any _**mayor**_ team decisions or design milestones/changes and corresponding justification._
 
-Sprint 1:
-
+Sprint 1: 
 Sprint 2:
