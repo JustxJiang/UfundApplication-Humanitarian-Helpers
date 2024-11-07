@@ -9,7 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-cupboard',
   standalone: true,
-  imports: [CommonModule,FormsModule],
+  imports: [CommonModule,FormsModule, HttpClientModule],
   templateUrl: './cupboard.component.html',
   styleUrl: './cupboard.component.css',
   providers: [NeedService]
