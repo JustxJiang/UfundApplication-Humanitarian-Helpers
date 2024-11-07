@@ -17,6 +17,7 @@ export class CupboardComponent implements OnInit{
   needs: Need[] = [];
   newNeed : Need = {id: 0, name: '', quantity: 0};
 
+  
   constructor(private needService: NeedService, private http: HttpClient){
 
   }
