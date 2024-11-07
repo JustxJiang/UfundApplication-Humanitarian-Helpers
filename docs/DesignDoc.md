@@ -158,6 +158,19 @@ This section describes the web interface flow; this is how the user views and in
 ### ViewModel Tier
 > _**[Sprint 1]** List the classes supporting this tier and provide a description of there purpose._
 
+The classes supporting the uFundAPI are found in the UserController class. The UserController houses five methods to support it.
+
+1. getNeed() - Retrieves a single need as input from the cupboard.
+2. getNeeds() - Retrieves a full list of all needs in the cupboard.
+3. searchNeeds() - Finds a need containing a substring as input by the user / developer.
+4. createNeed() - Creates a new need with data input from the user/developer.
+5. updateNeed() - Updates an existing need using data passed through by the user/developer.
+6. deleteNeed() - Deletes a need using the passed through ID.
+
+We also use the Need class to interact with various needs, as in when a need has to be updated or created. The ID can be found by calling on it using methods from this class.
+
+The CupboardDAO and CupboardFileDAO classes are used to interact with the cupboard found in a respectively named JSON file. These files will interpret the data and return it to the developer attempting to access this data. It is a means of persistence when updating/creating/deleting data.
+
 > _**[Sprint 4]** Provide a summary of this tier of your architecture. This
 > section will follow the same instructions that are given for the View
 > Tier above._
