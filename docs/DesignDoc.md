@@ -39,7 +39,23 @@ The purpose of this website is to develop a humanitarian website that supports p
 | Unit Test | A small portion of the program tested with different scenarios in order to confirm its functionality. |
 | Persistent Data | Data about the program stored in a file. |
 | User Story | A scenario depecting a certain function that must be implemented into the program. |
-(Jordan)
+| MVP | A product that is equipped with an amount of features that will satisfy early stakeholders. |
+| MVC | Stands for Model-View-Controller and is an architectural pattern that separates application logic into different components. | 
+| OOP | Stands for object oriented programming and is a software structure that works off of data encapsulation with resulting behaviors. |
+| HTML | Stands for Hypertext Markup Language, used to structure webpage elements. |
+| CSS | A style sheeting language that is used to oragnize HTML elements on a webpage. |
+| UI | Stands for user interface, is used for interacting with backend mechanics that is user friendly. |
+| UX | Stands for user experience, determines how satisfying and easy the product is to use and understand. |
+| CI | Continuous Integration | The practice of building software such that all working pieces are merged into one branch. |
+| CD | Automatically releases code changes straight to producting after passing a set of tests. |
+| Git | A version control system that allows multiple developers to work on the same project efficiently. |
+| REST | Stands for Representational State Transfer, and uses the standard HTTP methods (GET, POST, PUT, DELETE) |
+| GET | HTTP Method to retrieve data from the server. |
+| POST | HTTP Method to create new data and add it to a file on the server. |
+| PUT | HTTP Method to update or replace an already pre-existing entry. |
+| PATCH | HTTP Method that partially updates already existing data. |
+| DELETE | HTTP Method that removes data from a file located on the server. |
+(Jordan, Nick)
 
 ## Requirements
 
