@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Need } from './need';
-1
 
 @Injectable({
   providedIn: 'root'
@@ -21,10 +20,10 @@ export class NeedService {
   }
 
   updateNeed(need: Need): Observable<Need> {
-    return this.http.put<Need>(`${this.apiUrl}/${need.id}`, need);
+    return this.http.put<Need>(`${this.apiUrl}/${need.id}`, need);  // Use backticks for string interpolation
   }
 
   deleteNeed(needId: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiUrl}/${needId}`);
+    return this.http.delete<void>(`${this.apiUrl}/${needId}`);  // Use backticks for string interpolation
   }
 }

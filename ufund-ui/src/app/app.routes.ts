@@ -6,6 +6,6 @@ import { CupboardComponent } from './cupboard/cupboard.component';
 export const routes: Routes = [
   {path: 'app', component: HomeComponent}, // HomeComponent instead of AppComponent
   {path: 'signin', component: SigninComponent},
-  {path: '/cupboard', component: CupboardComponent},
+  {path: 'cupboard', component: CupboardComponent},
   {path: '', redirectTo: '/app', pathMatch: 'full'},
 ];
