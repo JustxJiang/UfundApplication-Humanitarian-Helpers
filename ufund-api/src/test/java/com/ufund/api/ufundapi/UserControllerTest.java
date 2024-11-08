@@ -132,7 +132,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void testDeleteNeed() throws IOException{
+     void testDeleteNeed() throws IOException{
         Need need = new Need(99, "testNeed");
         Need[] needs = new Need[]{need};
         Mockito.when(this.mockCupboardDAO.getNeeds()).thenReturn(needs);
@@ -142,7 +142,7 @@ public class UserControllerTest {
     }
 
     @Test 
-    public void testSearchNeed() throws IOException{
+    void testSearchNeed() throws IOException{
         String name = "testNeed";
         Need need = new Need(99, name);
         Need[] needs = new Need[]{need};
