@@ -54,11 +54,11 @@
       <div class="pet-card" *ngFor="let pet of pets">
         <img [src]="pet.image" alt="{{ pet.name }}" class="pet-image" />
         <h2>{{ pet.name }}</h2>
-        <p>Type: {{pet.type}}</p>
-        <p>Age: {{ pet.age }}</p>
-        <p>Gender: {{pet.gender}}</p>
-        <p>Location: {{ pet.location }}</p>
-        <button (click)="adoptPet(pet)">Adopt Me</button>
+        <p class = "pet-type">Type: {{pet.type}}</p>
+        <p class = "pet-age">class>Age: {{ pet.age }}</p>
+        <p class = "pet-gender"> Gender: {{pet.gender}}</p>
+        <p  class = "pet-location">Location: {{ pet.location }}</p>
+        <button (click)="adoptPet(pet)"class="adopt-button">Adopt Me</button>
       </div>
     </div>
   </div>

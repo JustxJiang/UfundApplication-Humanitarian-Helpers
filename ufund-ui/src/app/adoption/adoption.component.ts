@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-adoption',
   standalone: true,
-  imports: [],
+  imports: [NgFor],
   templateUrl: './adoption.component.html',
   styleUrl: './adoption.component.css'
 })
