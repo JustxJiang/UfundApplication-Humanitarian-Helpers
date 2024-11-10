@@ -7,7 +7,7 @@ import { Need } from './need';
   providedIn: 'root'
 })
 export class NeedService {
-  private apiUrl = 'http://localhost:8080/api/needs';
+  private apiUrl = 'http://localhost:8080/needs';
 
   constructor(private http: HttpClient) {}
 
