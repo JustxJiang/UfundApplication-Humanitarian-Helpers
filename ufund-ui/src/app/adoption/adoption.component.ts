@@ -9,6 +9,7 @@ import { NgFor } from '@angular/common';
   styleUrl: './adoption.component.css'
 })
 export class AdoptionComponent {
+
   pets = [
     {
       name:'Juan',
@@ -16,37 +17,47 @@ export class AdoptionComponent {
       age: 3,
       gender:'Male',
       location: 'Greece,NY',
-      image: 'ufund-ui/src/assets/Juan.png'
+      image: 'assets/Juan.png'
     },
     {
       name:'Ricky',
+      type: 'Hamster',
       age: 3,
+      gender: 'Male',
       location: 'Henrietta, NY',
-      image: 'ufund-ui/src/assets/Ricky the hamster.png'
+      image: 'assets/Ricky the hamster.png'
     },
     {
       name:'Priscilla',
+      type: 'Dog',
       age: 5,
+      gender: 'Female',
       location: 'Victor, NY',
-      image: 'ufund-ui/src/assets/Priscilla.png'
+      image: '/assets/Priscilla.png'
     },
     {
       name:'Darinka',
+      type: 'Dog',
       age: 3,
+      gender: 'Female',
       location: 'Bronx, NY',
-      image: 'ufund-ui/src/assets/Darinka.png'
+      image: 'assets/Darinka.png'
     },
     {
       name:'Kari',
+      type: 'Cat',
       age: 1,
+      gender: 'Female',
       location: 'Queens, NY',
-      image: 'ufund-ui/src/assets/Kari.png'
+      image: 'assets/Kari.png'
     },
     {
       name:'Sultan',
+      type: 'Parrot',
       age: 2,
+      gender: 'Male',
       location: 'Staten Island, NY',
-      image: 'ufund-ui/src/assets/Sultan.png'
+      image: 'assets/Sultan.png'
     }
   ];
   adoptPet(pet: { name: any; }) {
