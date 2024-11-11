@@ -17,6 +17,7 @@ public class Need {
 
     @JsonProperty("id") private int id;
     @JsonProperty("name") private String name;
+    @JsonProperty("quantity") private int quantity;
 
     /**
      * Create a need with the given id and name
@@ -28,9 +29,9 @@ public class Need {
      * is not provided in the JSON object, the Java field gets the default Java
      * value, i.e. 0 for int
      */
-    public Need(@JsonProperty("id") int id, @JsonProperty("name") String name) {
-        this.id = id;
+    public Need(@JsonProperty("name") String name, @JsonProperty("quantity") int quantity) {
         this.name = name;
+        this.quantity = quantity;
     }
 
     /**
@@ -38,6 +39,12 @@ public class Need {
      * @return The id of the need
      */
     public int getId() {return id;}
+
+    /**
+     * Sets the id of the need to new id
+     * @param id of the need 
+     */
+    public void setId(int id) {this.id = id;}
 
     /**
      * Sets the name of the need - necessary for JSON object to Java object deserialization
@@ -50,6 +57,18 @@ public class Need {
      * @return The name of the need
      */
     public String getName() {return name;}
+
+        /**
+     * Sets the quantity of the need - necessary for JSON object to Java object deserialization
+     * @param quantity The quantity of the need
+     */
+    public void setQuantity(int quantity) {this.quantity = quantity;}
+
+    /**
+     * Retrieves the quantity of the need
+     * @return The quantity of the need
+     */
+    public int getQuantity() {return quantity;}
 
     /**
      * {@inheritDoc}

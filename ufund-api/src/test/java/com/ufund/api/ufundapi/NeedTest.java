@@ -10,13 +10,10 @@ import com.ufund.api.model.Need;
 public class NeedTest {
     @Test
     public void testCtor() {
-        int expected_id = 99;
+        int expected_quantity = 99;
         String expected_name = "DogFood";
-        Need hero = new Need(expected_id,expected_name);
-        assertEquals(expected_id,hero.getId());
+        Need hero = new Need(expected_name, expected_quantity);
+        assertEquals(expected_quantity,hero.getQuantity());
         assertEquals(expected_name,hero.getName());
     }
-    
-
-
 }

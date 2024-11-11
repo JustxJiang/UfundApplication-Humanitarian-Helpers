@@ -1,14 +1,20 @@
-<h2>Cupboard</h2>
+<h2>My Cupboard</h2>
 
 <div>
-  <input [(ngModel)]="newNeed.name" placeholder="Need name" />
-  <input [(ngModel)]="newNeed.quantity" type="number" min="1" placeholder="Quantity" />
-  <button (click)="addNeed()">Add Need</button>
+  <label for="new-need">Need name: </label>
+  <input id="new-need" [(ngModel)]="newNeed.name" placeholder="Need name" />
+
+  <label for="new-quantity">Quantity: </label>
+  <input id="new-quantity" [(ngModel)]="newNeed.quantity" type="number" min="1" placeholder="Quantity" />
+
+  <button type="button" class="add-button" (click)="addNeed()">Add Need</button>
 </div>
 
-<ul>
+<ul class="needs">
   <li *ngFor="let need of needs">
-    {{ need.name }} - Quantity: {{ need.quantity }}
-    <button (click)="deleteNeed(need.id)">Delete</button>
+    <a routerLink="/cupboard/detail/{{need.id}}">
+      <span class="badge">{{need.id}}</span> {{need.name}} - Quantity: {{need.quantity}}
+    </a>
+    <button type="button" class="delete" title="delete need" (click)="deleteNeed(need.id)">x</button>
   </li>
 </ul>
