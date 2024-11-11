@@ -174,7 +174,7 @@ public class UserController {
                 existingNeed.setName(need.getName());
             }
 
-            if() // continue here 
+            if(){} // continue here 
                 Need updatedNeed = this.needDao.updateNeed(need);
                 
                 if (updatedNeed != null){
