@@ -42,9 +42,9 @@ public class CupboardFileDaoTest {
     public void setupCuoboardFileDAO() throws IOException {
         mockObjectMapper = mock(ObjectMapper.class);
         testHeroes = new Need[3];
-        testHeroes[0] = new Need(99,"Wi-Fire");
-        testHeroes[1] = new Need(100,"Galactic Agent");
-        testHeroes[2] = new Need(101,"Ice Gladiator");
+        testHeroes[0] = new Need("Wi-Fire", 2);
+        testHeroes[1] = new Need("Galactic Agent", 3);
+        testHeroes[2] = new Need("Ice Gladiator", 4);
 
         // When the object mapper is supposed to read from the file
         // the mock object mapper will return the hero array above
