@@ -1,0 +1,11 @@
+ul.needs{
+    display: grid;
+    grid-template-columns: repeat(autofill, minmax(200px, 300px));
+    grid-auto-flow: column wrap;
+    list-style: none;
+}
+.needs li{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}

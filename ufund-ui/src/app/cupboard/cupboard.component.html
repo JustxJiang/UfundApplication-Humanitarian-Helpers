@@ -8,9 +8,28 @@
   <input id="new-quantity" [(ngModel)]="newNeed.quantity" type="number" min="1" placeholder="Quantity" />
 
   <button type="button" class="add-button" (click)="addNeed()">Add Need</button>
+  
 </div>
 
 <ul class="needs">
+  <li>
+    <a routerLink="#">
+      <span class="badge">-3</span> Test Need - Quantity: 3
+    </a>
+    <button type="button" class="delete" title="delete need">x</button>
+  </li>
+  <li>
+    <a routerLink="#">
+      <span class="badge">-2</span> Test Need - Quantity: 3
+    </a>
+    <button type="button" class="delete" title="delete need">x</button>
+  </li>
+  <li>
+    <a routerLink="#">
+      <span class="badge">-1</span> Test Need - Quantity: 3
+    </a>
+    <button type="button" class="delete" title="delete need">x</button>
+  </li>
   <li *ngFor="let need of needs">
     <a routerLink="/cupboard/detail/{{need.id}}">
       <span class="badge">{{need.id}}</span> {{need.name}} - Quantity: {{need.quantity}}
