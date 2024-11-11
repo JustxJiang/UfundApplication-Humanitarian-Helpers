@@ -160,21 +160,32 @@ public class UserController {
     //     }
     // }
 
-    @PutMapping("")
-    public ResponseEntity<Need> updateNeed(@RequestBody Need need) {
-        LOG.info("PUT /needs " + need);
+    @PutMapping("/{id}")
+    public ResponseEntity<Need> updateNeed(@PathVariable int id, @RequestBody Need need) {
+        LOG.info("PUT /needs/" + id + " " + String.valueOf(need));
         try {
+            Need existingNeed = this.needDao.getNeed(id);
 
-            if (need != null) {
-                Need updatedNeed =needDao.updateNeed(need);
-
-                return new ResponseEntity<>(updatedNeed,HttpStatus.OK);
+            if (existingNeed == null) {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
 
-            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            if(need.getName() != null && !need.getName().isEmpty()){
+                existingNeed.setName(need.getName());
+            }
 
-            
-
+            if() // continue here 
+                Need updatedNeed = this.needDao.updateNeed(need);
+                
+                if (updatedNeed != null){
+                    return new ResponseEntity<>(updatedNeed,HttpStatus.OK);
+                }
+                else{
+                    return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+                }                
+            }else{
+                return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+            }
         }
 
         catch (Exception e) {
