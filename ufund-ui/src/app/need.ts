@@ -1,5 +1,7 @@
 export interface Need{
-    id: number; 
+
+    id: number;
     name: string;
     quantity: number;
+    
 }

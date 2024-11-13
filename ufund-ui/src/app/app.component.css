@@ -1,4 +1,8 @@
-nav{
+/* AppComponent's private CSS styles */
+h1 {
+    margin-bottom: 0;
+  }
+  nav{
     position: relative;
     background-color: #668F80;
 }

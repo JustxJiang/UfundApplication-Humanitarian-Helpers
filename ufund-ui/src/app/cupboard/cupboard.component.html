@@ -1,39 +1,22 @@
-<h2>My Cupboard</h2>
-
+<h2>Cupboard</h2>
+<app-cupboard-search></app-cupboard-search>
 <div>
-  <label for="new-need">Need name: </label>
-  <input id="new-need" [(ngModel)]="newNeed.name" placeholder="Need name" />
+  <label for="new-need">Add an item: </label>
+  <input id="new-need" #needName />
 
-  <label for="new-quantity">Quantity: </label>
-  <input id="new-quantity" [(ngModel)]="newNeed.quantity" type="number" min="1" placeholder="Quantity" />
-
-  <button type="button" class="add-button" (click)="addNeed()">Add Need</button>
-  
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button type="button" class="add-button" (click)="add(needName.value); needName.value=''">
+    Add item
+  </button>
 </div>
 
 <ul class="needs">
-  <li>
-    <a routerLink="#">
-      <span class="badge">-3</span> Test Need - Quantity: 3
-    </a>
-    <button type="button" class="delete" title="delete need">x</button>
-  </li>
-  <li>
-    <a routerLink="#">
-      <span class="badge">-2</span> Test Need - Quantity: 3
-    </a>
-    <button type="button" class="delete" title="delete need">x</button>
-  </li>
-  <li>
-    <a routerLink="#">
-      <span class="badge">-1</span> Test Need - Quantity: 3
-    </a>
-    <button type="button" class="delete" title="delete need">x</button>
-  </li>
   <li *ngFor="let need of needs">
-    <a routerLink="/cupboard/detail/{{need.id}}">
-      <span class="badge">{{need.id}}</span> {{need.name}} - Quantity: {{need.quantity}}
+    <a routerLink="/detail/{{need.id}}">
+      <span class="badge">{{need.id}}</span> {{need.name}}
     </a>
-    <button type="button" class="delete" title="delete need" (click)="deleteNeed(need.id)">x</button>
+    <button type="button" class="delete" title="delete need"
+      (click)="delete(need)">x</button>
   </li>
 </ul>
+<app-messages></app-messages>

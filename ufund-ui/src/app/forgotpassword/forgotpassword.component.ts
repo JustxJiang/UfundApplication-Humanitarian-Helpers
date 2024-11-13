@@ -1,24 +1,23 @@
 import { Component } from '@angular/core';
-import {  FormGroup } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
-import { NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
+import {  FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-forgotpassword',
-  standalone: true,
-  imports: [ReactiveFormsModule,NgIf],
   templateUrl: './forgotpassword.component.html',
+  standalone: true,
+  imports:[ReactiveFormsModule, CommonModule],
   styleUrls: ['./forgotpassword.component.css']
 })
 export class ForgotpasswordComponent {
-  restPasswordForm!: FormGroup;
+  resetPasswordForm!: FormGroup;
   message: string | null= null;
   
   onSubmit(){
-    if(this.restPasswordForm.valid){
-      const email = this.restPasswordForm.value.email;
+    if(this.resetPasswordForm.valid){
+      const email = this.resetPasswordForm.value.email;
       this.message = `A link has been sent to your ${email} Please follow the instruction in the email to reset your password.`;
-      this.restPasswordForm.reset();
+      this.resetPasswordForm.reset();
     }
   }
 }

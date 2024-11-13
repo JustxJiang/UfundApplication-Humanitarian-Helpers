@@ -1,16 +1,21 @@
-import { TestBed } from '@angular/core/testing';
+import { Injectable } from '@angular/core';
 
-import { NeedService } from './need.service';
+import { Observable, of } from 'rxjs';
 
-describe('NeedService', () => {
-  let service: NeedService;
+import { Need } from './need';
+import { NEEDS } from './mock-needs';
+import { MessageService } from './message.service';
 
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(NeedService);
-  });
+@Injectable({
+  providedIn: 'root',
+})
+export class NeedService {
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+  constructor(private messageService: MessageService) { }
+
+  getNeeds(): Observable<Need[]> {
+    const needs = of(NEEDS);
+    this.messageService.add('NeedService: fetched needs');
+    return needs;
+  }
+}

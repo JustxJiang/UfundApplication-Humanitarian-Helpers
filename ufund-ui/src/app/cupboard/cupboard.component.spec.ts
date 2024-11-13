@@ -8,10 +8,10 @@ describe('CupboardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CupboardComponent]
+      declarations: [CupboardComponent]
     })
     .compileComponents();
-
+    
     fixture = TestBed.createComponent(CupboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

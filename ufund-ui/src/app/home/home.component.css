@@ -1,84 +1,24 @@
-/* page global items */
 *{
-    font-family:'Courier New', Courier, monospace;
     font-size: 1em;
-}
-/* on page title only will replace with a proper logo later*/
-h1{
-    font-weight: bolder;
-    font-size:1.5em;
     text-align: center;
+    display: grid;    
 }
 
-.mt-4{
-    display:flow;
-}
+
+
 .title{
-    text-align: center;
-    padding:50px;
-}
 
-main{
-    width:60em;
-    margin:2em;
-    display: grid;
-    justify-self:center;
-    grid-template-columns: 40em 20em;
-    grid-template-rows: 8fr 2fr;
-    grid-template-areas:    "page links" 
-                            "page image";
-    border: 2px solid black;
-}
-.links{
-    display:grid;
-    background: #4b4a67;
-    grid-template-rows: 45% 45% 10%;
-}
-ul{padding-left:0;}
-li{list-style-type: none;}
-.links>li{
-    span: 1fr;
-    border: 1px solid black;
-    width: 20em;
-}
-.links li button{
-    color: #FCFCFC;
-    width:100%;
-    height: 100%;
-    background: #4b4a67;
-    font-size: 2em;
-    font-weight: 300;
-}
-.m{
-    display: grid;
-    grid-template-columns:1fr 1fr;
-    grid-template-areas: "discord other";
-    height: 100%;
-}
-.m li button{
-    color: #FCFCFC;
-    width:100%;
-    height: 100%;
-    background: #4b4a67;
-    font-size: 1em;
-    font-weight: 300;
-}
-.discord{grid-area: discord;}
-.other{grid-area: other;}
-ul.links:first-child{
-    grid-area: links;
-}
-img{
-    grid-area: image;
 }
 .body{
-    grid-area: page;
+    max-width: 80%;
+    margin: 3em auto;
+    padding: 1em;
+    border-radius: 5px;
 }
-footer{
-    background-color: #4b4a67;
-    min: height 10em;;
-    width:100vw;
+.button_group{
 }
-p{
-    font-size:1em;
+.button_link{
+    border-radius: 5px;
+    width: 10%;
+    height: 3em;
 }

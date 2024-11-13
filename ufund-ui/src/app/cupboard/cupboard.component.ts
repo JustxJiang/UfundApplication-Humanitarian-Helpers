@@ -1,60 +1,38 @@
-import { Component, OnInit} from '@angular/core';
-import {Need} from '../need'
+import { Component, OnInit } from '@angular/core';
+import { Need } from '../need';
 import { NeedService } from '../need.service';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { RouterModule } from '@angular/router';
-
 
 @Component({
   selector: 'app-cupboard',
-  standalone: true,
-  imports: [CommonModule,FormsModule, HttpClientModule,RouterModule],
   templateUrl: './cupboard.component.html',
-  styleUrl: './cupboard.component.css',
-  providers: [NeedService]
-  
+  styleUrls: ['./cupboard.component.css']
 })
-export class CupboardComponent implements OnInit{
+export class CupboardComponent implements OnInit {
   needs: Need[] = [];
-  newNeed : Need = {id: 0, name: '', quantity: 0};
 
-  
-  constructor(private needService: NeedService){
-
-  }
+  constructor(private needService: NeedService) { }
 
   ngOnInit(): void {
-      this.loadNeeds();
+    this.getNeeds();
   }
 
-  loadNeeds(): void{
-    this.needService.getNeeds().subscribe(data=>{
-      this.needs = data;
-    })
+  getNeeds(): void {
+    this.needService.getNeeds()
+    .subscribe(needs => this.needs = needs);
   }
 
-  addNeed(): void{
-    if(this.newNeed.name && this.newNeed.quantity > 0){
-      this.needService.addNeed(this.newNeed).subscribe(() => {
-        this.loadNeeds();
-        this.newNeed = {id: 0, name: '', quantity: 0};
-      })
-    }
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.needService.addNeed({ name } as Need)
+      .subscribe(need => {
+        this.needs.push(need);
+      });
   }
 
-  
-  updateNeed(need: Need): void {
-    this.needService.updateNeed(need).subscribe(() => {
-      this.loadNeeds();
-    });
-  }
-
-  deleteNeed(needId: number): void {
-    this.needService.deleteNeed(needId).subscribe(() => {
-      this.loadNeeds();
-    });
+  delete(need: Need): void {
+    this.needs = this.needs.filter(n => n !== need);
+    this.needService.deleteNeed(need.id).subscribe();
   }
 
 }

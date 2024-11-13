@@ -1,21 +1,29 @@
 <body>
-    <nav class = "navbar navbar-expand-lg fixed-top  navbar-expand-sm p-3 navigation">
+  <nav class = "navbar navbar-expand-lg fixed-top  navbar-expand-sm p-3 navigation">
 
-        <h1 class = "ms-2"><img class = "icon" src="../assets/pawsitive_connections_logo.png" alt="Pawsitive Connections Logo"></h1>
+      <h1 class = "ms-2"><img class = "icon" src="../assets/pawsitive_connections_logo.png" alt="Pawsitive Connections Logo"></h1>
 
-        <!-- home button -->
-        <button class = "navbar-toggler p-3" type = "button" data-bs-toggle = "collapse" data-bs-target = "#collapsemenu">
-            <span class = "navbar-toggler-icon"></span>
-        </button>
+      <!-- home button -->
+      <button class = "navbar-toggler p-3" type = "button" data-bs-toggle = "collapse" data-bs-target = "#collapsemenu">
+          <span class = "navbar-toggler-icon"></span>
+      </button>
 
-        <!-- dropdown -->
-        <div class = "collapse navbar-collapse" id = "collapsemenu">
-            <ul class = "navbar-nav ms-auto">
-                <li><a routerLink = "/app" routerLinkActive = "active" class = "nav-item nav-link">Home</a></li>
-                <li><a routerLink = "/cupboard" routerLinkActive = "active" class = "nav-item nav-link">Donation</a></li>
-                <li><a routerLink = "/signin" routerLinkActive = "active" class = "nav-item nav-link"><img class = "icon" src="../assets/user.png" alt="img not loaded"></a></li>       
-            </ul>
-        </div>
-    </nav>       
-    <router-outlet></router-outlet>
+      <!-- dropdown -->
+      <div class = "collapse navbar-collapse" id = "collapsemenu">
+          <ul class = "navbar-nav ms-auto">
+              <li><a routerLink = "/app" routerLinkActive = "active" class = "nav-item nav-link">Home</a></li>
+              <li><a routerLink = "/cupboard" routerLinkActive = "active" class = "nav-item nav-link">Donation</a></li>
+              <li><a routerLink = "/signin" routerLinkActive = "active" class = "nav-item nav-link"><img class = "icon" src="../assets/user.png" alt="img not loaded"></a></li>       
+          </ul>
+      </div>
+  </nav>
+  
+  <h1>Quick Links: </h1>
+  <a routerLink="/signin">Sign In</a>
+  <a routerLink="/dashboard">Dashboard</a>
+  <!--<a routerLink="/heroes">Causes</a>-->
+  <a routerLink="/adoption">Adopt</a>
+
+  <router-outlet></router-outlet>
+
 </body>
