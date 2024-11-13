@@ -209,8 +209,13 @@ Sprint 2
 
 
 > _**[Sprint 3 & 4]** OO Design Principles should span across **all tiers.**_
-**Sprint 3**
-   **Controller tier**
+
+Sprint 3
+Controller tier
+>![image](https://github.com/user-attachments/assets/6ba27a38-2529-4cb9-a020-f7041d680025)
+
+Model tier
+
 
 ## Static Code Analysis/Future Design Improvements
 > _**[Sprint 4]** With the results from the Static Code Analysis exercise, 
