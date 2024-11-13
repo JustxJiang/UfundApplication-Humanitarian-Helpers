@@ -200,14 +200,15 @@ We have worked to implement single responsibility and low coupling into our proj
 Updated by Nick
 
 > _**[Sprint 2, 3 & 4]** Will eventually address upto **4 key OO Principles** in your final design. Follow guidance in augmenting those completed in previous Sprints as indicated to you by instructor. Be sure to include any diagrams (or clearly refer to ones elsewhere in your Tier sections above) to support your claims._
-> **Sprint 2**
+**Sprint 2**
 > ![image](https://github.com/user-attachments/assets/cc190751-a308-48cb-b5ff-2a64875533fb)
 > ![image](https://github.com/user-attachments/assets/64ca8e22-cad6-4c21-94fc-7cc2eea267c1)
 
 
 
 > _**[Sprint 3 & 4]** OO Design Principles should span across **all tiers.**_
-> **Sprint 3**
+**Sprint 3**
+   **Controller tier**
 
 ## Static Code Analysis/Future Design Improvements
 > _**[Sprint 4]** With the results from the Static Code Analysis exercise, 
