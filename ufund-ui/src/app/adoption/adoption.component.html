@@ -47,18 +47,17 @@
         </div>
     </div>
 </body> -->
-
+<h1 class = "adopt_title">Adopt a Pet!</h1>
 <div class="pet-adoption-container">
-    <h1>Adopt a Pet!</h1>
     <div class="pet-cards">
       <div class="pet-card" *ngFor="let pet of pets">
         <img [src]="pet.image" alt="{{ pet.name }}" class="pet-image"/>
-        <h2>{{ pet.name }}</h2>
-        <p class = "pet-type">Type: {{pet.type}}</p>
-        <p class = "pet-age">Age: {{ pet.age }}</p>
-        <p class = "pet-gender"> Gender: {{pet.gender}}</p>
-        <p  class = "pet-location">Location: {{ pet.location }}</p>
-        <iframe src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385.52767350107!2d-77.58989521486804!3d43.14406936489944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d6b50de963de59%3A0x924d4c0f95a952fc!2sDogtown!5e0!3m2!1sen!2sus!4v1731548307459!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h2 class = "pet-name">{{ pet.name }}</h2>
+        <p class = "pet-type"><span class = "pet-subtitle">Type:</span> {{pet.type}}</p>
+        <p class = "pet-age"><span class = "pet-subtitle">Age:</span> {{ pet.age }}</p>
+        <p class = "pet-gender"> <span class = "pet-subtitle">Gender:</span> {{pet.gender}}</p>
+        <p  class = "pet-location"><span class = "pet-subtitle">Location:</span> {{pet.gender}} {{ pet.location }}</p>
+        <iframe class = "map" src= "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385.52767350107!2d-77.58989521486804!3d43.14406936489944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d6b50de963de59%3A0x924d4c0f95a952fc!2sDogtown!5e0!3m2!1sen!2sus!4v1731548307459!5m2!1sen!2sus" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <p></p>
         <button (click)="adoptPet(pet)"class="adopt-button">Adopt Me</button>
       </div>
