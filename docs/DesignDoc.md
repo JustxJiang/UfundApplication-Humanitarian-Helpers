@@ -215,6 +215,7 @@ Controller tier
 >![image](https://github.com/user-attachments/assets/6ba27a38-2529-4cb9-a020-f7041d680025)
 
 Model tier
+>![image](https://github.com/user-attachments/assets/6dd96367-3674-4adc-9ce0-d0d57da47f01)
 
 
 ## Static Code Analysis/Future Design Improvements
