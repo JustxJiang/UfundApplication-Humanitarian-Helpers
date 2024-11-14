@@ -267,6 +267,9 @@ Sprint 2:
 
 > Update by Nick
 
+Sprint 3:
+
+![Sprint 3 Code Coverage](codecoverage.png) 
 ## Ongoing Rationale
 >_**[Sprint 1, 2, 3 & 4]** Throughout the project, provide a time stamp **(yyyy/mm/dd): Sprint # and description** of any _**mayor**_ team decisions or design milestones/changes and corresponding justification._
 
