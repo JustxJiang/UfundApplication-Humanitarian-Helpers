@@ -217,6 +217,8 @@ Controller tier
 Model tier
 >![image](https://github.com/user-attachments/assets/6dd96367-3674-4adc-9ce0-d0d57da47f01)
 
+Persistence tier
+>![image](https://github.com/user-attachments/assets/a4c7ca7a-3081-4852-9f2c-53ee69733327)
 
 ## Static Code Analysis/Future Design Improvements
 > _**[Sprint 4]** With the results from the Static Code Analysis exercise, 
