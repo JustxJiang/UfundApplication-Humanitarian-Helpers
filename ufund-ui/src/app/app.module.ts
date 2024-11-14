@@ -6,7 +6,6 @@ import { HttpClientModule, provideHttpClient, withFetch, withInterceptorsFromDi 
 // import { InMemoryDataService } from './in-memory-data.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { CupboardDetailComponent } from './cupboard-detail/cupboard-detail.component';
 import { CupboardComponent } from './cupboard/cupboard.component';
 import { CupboardSearchComponent } from './cupboard-search/cupboard-search.component';
@@ -18,7 +17,6 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 
 @NgModule({ declarations: [
         AppComponent,
-        DashboardComponent,
         CupboardComponent,
         CupboardDetailComponent,
         MessagesComponent,

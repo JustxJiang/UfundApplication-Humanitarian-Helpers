@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { CupboardComponent } from './cupboard/cupboard.component';
 import { CupboardDetailComponent } from './cupboard-detail/cupboard-detail.component';
 import { SigninComponent } from './signin/signin.component';
@@ -18,8 +17,6 @@ const routes: Routes = [
   {path: 'cupboard', component: CupboardComponent},
   {path: 'forgotpassword', component: ForgotpasswordComponent},
   {path: 'adoption', component: AdoptionComponent},
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: CupboardDetailComponent },
   { path: 'needs', component: CupboardComponent },
 

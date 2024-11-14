@@ -5,7 +5,10 @@
   padding: 0;
   width: 15em;
 }
-
+.cupboard-title{
+  color: #4B4A67;
+  margin-top: 1em;
+}
 input {
   display: block;
   width: 100%;
