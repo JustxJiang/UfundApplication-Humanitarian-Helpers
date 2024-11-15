@@ -272,6 +272,8 @@ Sprint 2:
 > Update by Nick
 
 Sprint 3:
+> Due to the recent build failure of the spring boot getting our code coverage is challenging at the moment. All tests are implemented and successfully passed.
+> updated by Macca A. 
 
 ![Sprint 3 Code Coverage](codecoverage.png) 
 ## Ongoing Rationale
@@ -279,3 +281,4 @@ Sprint 3:
 
 Sprint 1: 
 Sprint 2:
+Sprint 3: 
