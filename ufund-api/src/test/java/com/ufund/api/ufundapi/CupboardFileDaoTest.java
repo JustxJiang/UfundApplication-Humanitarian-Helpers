@@ -23,14 +23,14 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 /**
- * Test the Hero File DAO class
+ * Test the NeedFile DAO class
  * 
  * @author SWEN Faculty
  */
 @Tag("Persistence-tier")
 public class CupboardFileDaoTest {
-    CupboardFileDao cupboardFileDao;
-    Need[] testHeroes;
+    CupboardFileDao cupboardFileDAO;
+    Need[] testNeeds;
     ObjectMapper mockObjectMapper;
 
     /**
@@ -39,42 +39,53 @@ public class CupboardFileDaoTest {
      * @throws IOException
      */
     @BeforeEach
-    public void setupCuoboardFileDAO() throws IOException {
+    public void setupCupboardFileDAO() throws IOException {
         mockObjectMapper = mock(ObjectMapper.class);
-        testHeroes = new Need[3];
-        testHeroes[0] = new Need("Wi-Fire", 2);
-        testHeroes[1] = new Need("Galactic Agent", 3);
-        testHeroes[2] = new Need("Ice Gladiator", 4);
-
+        testNeeds = new Need[3];
+        testNeeds[0] = new Need("Wi-Fire",99);
+        testNeeds[1] = new Need("Galactic Agent",100);
+        testNeeds[2] = new Need("Ice Gladiator",101);
+        testNeeds[0].setId(0);
+        testNeeds[1].setId(1);
+        testNeeds[2].setId(2);
         // When the object mapper is supposed to read from the file
         // the mock object mapper will return the hero array above
         when(mockObjectMapper
             .readValue(new File("doesnt_matter.txt"),Need[].class))
-                .thenReturn(testHeroes);
-        cupboardFileDao = new CupboardFileDao("doesnt_matter.txt",mockObjectMapper);
+                .thenReturn(testNeeds);
+        cupboardFileDAO = new CupboardFileDao("doesnt_matter.txt",mockObjectMapper);
     }
 
     @Test
-    public void testGetHeroes() {
+    public void testGetNeeds() {
         // Invoke
-         Need[] needs = cupboardFileDao.getNeeds();
+        Need[] needs = cupboardFileDAO.getNeeds();
 
         // Analyze
-        assertEquals(needs.length,testHeroes.length);
-        for (int i = 0; i < testHeroes.length;++i)
-            assertEquals(needs[i],testHeroes[i]);
+        assertEquals(needs.length,testNeeds.length);
+        for (int i = 0; i < testNeeds.length;++i)
+            assertEquals(needs[i],testNeeds[i]);
     }
 
     @Test
-    public void testFindHeroes() {
+    public void testFindNeeds() {
         // Invoke
-        Need[] heroes = cupboardFileDao.findNeeds("la");
+        Need[] needs= cupboardFileDAO.findNeeds("Agent");
 
         // Analyze
-        assertEquals(heroes.length,2);
-        assertEquals(heroes[0],testHeroes[1]);
-        assertEquals(heroes[1],testHeroes[2]);
+        assertEquals(needs.length,1);
+        assertEquals(needs[0],testNeeds[1]);
+      
     }
-    
+
+    @Test
+    public void testGetNeed() {
+        // Invoke
+        Need need = cupboardFileDAO.getNeed(0);
+
+        // Analzye
+        assertEquals(need,testNeeds[0]);
+    }
+
 
 }
