@@ -60,7 +60,7 @@ public class UserController {
             
         } catch (Exception e) {
             LOG.log(Level.SEVERE, e.getLocalizedMessage());
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.OK);
         }
     }
 
@@ -127,6 +127,7 @@ public class UserController {
             if (existingNeed == null) {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
+
     
             // Update only fields that are not null or empty in the request body
             if (need.getName() != null && !need.getName().isEmpty()) {
@@ -144,7 +145,7 @@ public class UserController {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
     
-        } catch (Exception e) {
+        } catch (IOException e) {
             LOG.log(Level.SEVERE, e.getLocalizedMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }

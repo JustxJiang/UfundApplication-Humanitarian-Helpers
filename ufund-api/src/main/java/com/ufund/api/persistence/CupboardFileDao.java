@@ -45,7 +45,9 @@ public class CupboardFileDao implements CupboardDAO {
     public CupboardFileDao(@Value("${needs.file}") String filename,ObjectMapper objectMapper) throws IOException {
         this.filename = filename;
         this.objectMapper = objectMapper;
-        load();  // load the needs from the file
+
+
+        load(); // load the needs from the file
     }
 
     /**

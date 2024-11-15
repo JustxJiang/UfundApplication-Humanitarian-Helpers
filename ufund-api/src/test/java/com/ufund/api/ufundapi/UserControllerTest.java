@@ -76,9 +76,11 @@ public class UserControllerTest {
    @Test
    public void testUpdateNeed() throws IOException {
       Need need = new Need("Food", 5);
+      Mockito.when(this.mockCupboardDAO.getNeed(need.getId())).thenReturn(need);
       Mockito.when(this.mockCupboardDAO.updateNeed(need)).thenReturn(need);
       this.userController.updateNeed(need.getId(), need);
       need.setName("Bolt");
+      Mockito.when(this.mockCupboardDAO.updateNeed(need)).thenReturn(need);
       ResponseEntity<Need> response = this.userController.updateNeed(need.getId(),need);
       Assertions.assertEquals(HttpStatus.OK, response.getStatusCode());
       Assertions.assertEquals(need, response.getBody());
@@ -89,11 +91,12 @@ public class UserControllerTest {
         Need need = new Need("Galactic Agent", 99);
         when(mockCupboardDAO.updateNeed(need)).thenReturn(null);
         ResponseEntity<Need> response = userController.updateNeed(need.getId(),need);
-        assertEquals(HttpStatus.OK,response.getStatusCode());
+        assertEquals(HttpStatus.NOT_FOUND,response.getStatusCode());
     }
    @Test
    public void testUpdateNeedHandleException() throws IOException { 
         Need need = new Need("Galactic Agent", 99);
+        when(mockCupboardDAO.getNeed(need.getId())).thenReturn(need);
         doThrow(new IOException()).when(mockCupboardDAO).updateNeed(need);
         ResponseEntity<Need> response = userController.updateNeed(need.getId(),need);
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR,response.getStatusCode());
@@ -141,9 +144,10 @@ public class UserControllerTest {
         assertEquals(HttpStatus.OK,response.getStatusCode());
     }
 
-    @Test 
+    @SuppressWarnings("null")
+   @Test 
     void testSearchNeed() throws IOException{
-        String name = "testNeed";
+        String name = "Bread";
         Need need = new Need("Bread", 5);
         Need[] needs = new Need[]{need};
         Mockito.when(this.mockCupboardDAO.getNeeds()).thenReturn(needs);

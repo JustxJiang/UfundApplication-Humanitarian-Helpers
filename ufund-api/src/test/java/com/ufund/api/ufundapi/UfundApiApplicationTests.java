@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 class UfundApiApplicationTests {
 
 	@Test
-	void contextLoads() {
+	void testcontextLoads() {
 	}
 
 }
