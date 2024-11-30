@@ -1,26 +1,20 @@
 package com.ufund.api.ufundapi;
 
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.doThrow;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
 import java.io.File;
 import java.io.IOException;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.ufund.api.model.Need;
 import com.ufund.api.persistence.CupboardFileDao;
-
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
 
 /**
  * Test the NeedFile DAO class
@@ -87,5 +81,19 @@ public class CupboardFileDaoTest {
         assertEquals(need,testNeeds[0]);
     }
 
+    @Test
+    public void testDeleteNeed() throws IOException {
+        Need need = cupboardFileDAO.getNeed(0);
+        boolean IsSuccess = cupboardFileDAO.deleteNeed(0);
+        cupboardFileDAO.createNeed(need);
+        assertEquals(true, IsSuccess);
+    }
+
+    @Test
+    public void testDeleteNeedFail() {
+        assertThrows(IOException.class, () -> {
+            cupboardFileDAO.deleteNeed(99);
+        });
+    }
 
 }

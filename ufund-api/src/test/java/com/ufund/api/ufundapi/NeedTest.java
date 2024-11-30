@@ -1,6 +1,5 @@
 package com.ufund.api.ufundapi;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -31,7 +30,6 @@ public class NeedTest {
         // Analyze
         assertEquals(expected_name,need.getName());
     }
-
     @Test
     public void testGetNeed() {
         // Setup
@@ -87,6 +85,8 @@ public class NeedTest {
         assertEquals(name, need.getName());
         assertEquals(0, need.getQuantity());
     }
+
+
 }
 
 
