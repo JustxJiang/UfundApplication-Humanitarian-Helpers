@@ -193,6 +193,8 @@ This section describes the web interface flow; this is how the user views and in
 > responsibilities.  This should be a narrative description, i.e. it has
 > a flow or "story line" that the reader can follow._
 
+PASITIVECONNECTIONS is designed to guide users seamlessly through their tasks. Users begin their journey on the homepage, which allows them to sign in with an email and password. Users can navigate the Cupboard or use the search feature to find needs they want to fulfill. Helper can go to the adoption page and see various pets and the description of the pet including their age, gender, and name. If a user is interested in the pet the helper can see a map view of how far the pet is for adoption. Users engage with the platform through the Messages component for updates and confirmations, proceeding to donate via their carts. For account management, users can recover access using the Forget Password page if a user forgets their password.
+
 > _**[Sprint 4]** You must  provide at least **2 sequence diagrams** as is relevant to a particular aspects 
 > of the design that you are describing.  (**For example**, in a shopping experience application you might create a 
 > sequence diagram of a customer searching for an item and adding to their cart.)
