@@ -21,7 +21,7 @@ This project is focused on making software that will assist various humanitarian
 > _**[Sprint 2 & 4]** Provide a very brief statement about the project and the most important user group and user goals._
 
 #### Pawsitive Connections
-The purpose of this website is to develop a humanitarian website that supports pet owners and animal shelters by fulfilling their needs financially. Donations of all kinds are accepted, whether it be monetary or physical items.
+The purpose of this project is to develop a humanitarian website that supports pet owners and animal shelters by fulfilling their needs. Donations of all kinds are accepted, whether it be monetary or physical items.
 (Macca, Jordan, Nick)
 
 ### Glossary and Acronyms
