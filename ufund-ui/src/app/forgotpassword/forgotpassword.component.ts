@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {  FormGroup, ReactiveFormsModule , FormBuilder,Validators} from '@angular/forms';
+import {  FormGroup, ReactiveFormsModule , FormBuilder, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-forgotpassword',
