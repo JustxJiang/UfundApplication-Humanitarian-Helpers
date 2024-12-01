@@ -130,6 +130,16 @@ EPIC: Manager
 ### Enhancements
 > _**[Sprint 4]** Describe what enhancements you have implemented for the project._
 
+Map View: 
+
+With the map view, a helper find local shelters or if they want to adopt a pet ,  see where the animal is located. 
+
+Adoption page:
+
+The adoption page designed to help local shelters or pet owners list their animals adoption. 
+
+(Macca)
+
 
 ## Application Domain
 
