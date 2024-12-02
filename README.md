@@ -1,7 +1,6 @@
-# U-Fund:  _____ _replace with your particular fundraising type_ _____
-# Modify this document to expand any and all sections that are applicable for a better understanding from your users/testers/collaborators (remove this comment and other instructions areas for your FINAL release)
+# U-Fund: Humanitarian Helpers - TeamAxiom
 
-An online U-Fund system built in Java 17=> and ___ _replace with other platform requirements_ ___
+An online U-Fund system built in Java 17 utilizing Spring Boot and Angular to create a website that allows for donations from third parties that go to humanitarian societies and charities looking for help. This system hopes to provide an efficient and transparent way for donators to fund projects.
   
 ## Team
 
@@ -16,8 +15,9 @@ An online U-Fund system built in Java 17=> and ___ _replace with other platform 
 
 - Java 11=>17 (Make sure to have correct JAVA_HOME setup in your environment)
 - Maven
--  _add any other tech stack requirements_
-
+- Angular
+- NodeJS
+- Git
 
 ## How to run it
 
@@ -27,10 +27,10 @@ An online U-Fund system built in Java 17=> and ___ _replace with other platform 
 4.  _add any other steps required or examples of how to use/run_
 
 ## Known bugs and disclaimers
-(It may be the case that your implementation is not perfect.)
 
-Document any known bug or nuisance.
-If any shortcomings, make clear what these are and where they are located.
+1. Our current implementation works relatively smoothly, although there is a lingering bug on some systems that, when attempting to run the Java/Spring backend, the program will have a hard time locating the file that contains the "needs." To solve this:
+
+- Locate the "needs.json" file in ufund-api/data folder. Copy the relative path of this file, and replace it with the current path found in the "application.properties" file under resources found in the ufund-api section. This should resolve any issue with booting.
 
 ## How to test it
 
