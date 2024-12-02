@@ -320,15 +320,15 @@ Persistence tier
 
 Sprint 2:
 
->As of right now, our code coverage is rather lack luster. We have not been able to setup many tests for our current web application, hence the 0% coverage checks on the UI.
+- As of right now, our code coverage is rather lack luster. We have not been able to setup many tests for our current web application, hence the 0% coverage checks on the UI.
 
->On the contrary, our backend application has a higher score but not an optimal one, around 70%. We will work on improving this score to create a more cohesive application.
+- On the contrary, our backend application has a higher score but not an optimal one, around 70%. We will work on improving this score to create a more cohesive application.
 
-> Update by Nick
+- Updated by Nick
 
 Sprint 3:
-> Due to the recent build failure of the spring boot getting our code coverage is challenging at the moment. All tests are implemented and successfully passed.
-> updated by Macca A. 
+- Due to the recent build failure of the spring boot getting our code coverage is challenging at the moment. All tests are implemented and successfully passed.
+- updated by Macca A. 
 
 ![Sprint 3 Code Coverage](codecoverage.png) 
 ## Ongoing Rationale
@@ -336,4 +336,5 @@ Sprint 3:
 
 Sprint 1: 
 Sprint 2:
-Sprint 3: 
+Sprint 3:
+Sprint 4:
