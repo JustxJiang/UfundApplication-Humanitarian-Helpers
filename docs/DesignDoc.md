@@ -233,21 +233,12 @@ Updated by Nick
 
 ## OO Design Principles
 
-> _**[Sprint 1]** Name and describe the initial OO Principles that your team has considered in support of your design (and implementation) for this first Sprint._
-
 We have worked to implement single responsibility and low coupling into our project. This way, our classes only have one purpose in the project and do not become too overburdened. Our hope is to have a fluid program that has many moving parts, but work in high cohesion. As for low coupling, we have worked to ensure that we are not accessing classes unnecessarily to achieve a similar goal. We have refactored our project for this purpose.
 Updated by Nick
-
-> _**[Sprint 2, 3 & 4]** Will eventually address upto **4 key OO Principles** in your final design. Follow guidance in augmenting those completed in previous Sprints as indicated to you by instructor. Be sure to include any diagrams (or clearly refer to ones elsewhere in your Tier sections above) to support your claims._
-
 
 Sprint 2
 > ![image](https://github.com/user-attachments/assets/cc190751-a308-48cb-b5ff-2a64875533fb)
 > ![image](https://github.com/user-attachments/assets/64ca8e22-cad6-4c21-94fc-7cc2eea267c1)
-
-
-
-> _**[Sprint 3 & 4]** OO Design Principles should span across **all tiers.**_
 
 Sprint 3
 Controller tier
@@ -265,6 +256,18 @@ Persistence tier
 > **Identify 3-4** areas within your code that have been flagged by the Static Code 
 > Analysis Tool (SonarQube) and provide your analysis and recommendations.  
 > Include any relevant screenshot(s) with each area._
+
+>![image](firstCoverage.png)
+
+In our first code coverage report, we were missing a few pieces that caused us to receive a low score of around 70%. These were issues that we were going to address, in order to make sure that our projects worked as smoothly as possible.
+
+>![image](secondCoverage.png)
+
+In our final code coverage report, we saw a great improvement over 25%. These tests streamlined the process of checking our new features. The only missing pieces that prevented us from achieveing a 100% score were the test that checks that the UI can start, and a small null value check in our API. These things are most likely easy to be fixed, and would not cause serious harm to the program. The most important pieces functioned properly, giving us a high score.
+
+In the future, we would take care of these issues to make sure that we are operating at peak performance.
+
+(Nick)
 
 > _**[Sprint 4]** Discuss **future** refactoring and other design improvements your team would explore if the team had additional time._
 
