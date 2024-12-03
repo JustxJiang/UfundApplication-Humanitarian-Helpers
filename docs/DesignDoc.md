@@ -257,11 +257,11 @@ Persistence tier
 > Analysis Tool (SonarQube) and provide your analysis and recommendations.  
 > Include any relevant screenshot(s) with each area._
 
->![image](firstCoverage.png)
+![image](firstCoverage.png)
 
 In our first code coverage report, we were missing a few pieces that caused us to receive a low score of around 70%. These were issues that we were going to address, in order to make sure that our projects worked as smoothly as possible.
 
->![image](secondCoverage.png)
+![image](secondCoverage.png)
 
 In our final code coverage report, we saw a great improvement over 25%. These tests streamlined the process of checking our new features. The only missing pieces that prevented us from achieveing a 100% score were the test that checks that the UI can start, and a small null value check in our API. These things are most likely easy to be fixed, and would not cause serious harm to the program. The most important pieces functioned properly, giving us a high score.
 
