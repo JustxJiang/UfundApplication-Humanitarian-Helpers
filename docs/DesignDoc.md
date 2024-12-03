@@ -252,28 +252,22 @@ Persistence tier
 
 
 ## Static Code Analysis/Future Design Improvements
-> _**[Sprint 4]** With the results from the Static Code Analysis exercise, 
-> **Identify 3-4** areas within your code that have been flagged by the Static Code 
-> Analysis Tool (SonarQube) and provide your analysis and recommendations.  
-> Include any relevant screenshot(s) with each area._
 
-![image](firstCoverage.png)
+![image](StaticCoverage.png)
 
-In our first code coverage report, we were missing a few pieces that caused us to receive a low score of around 70%. These were issues that we were going to address, in order to make sure that our projects worked as smoothly as possible.
+This is our first run through using JaCoCo. The results indicate that we only managed to reach a coverage of around 84%, which is not ideal. This is the amount that our project would stay at between Sprints 1-3.
 
-![image](secondCoverage.png)
+![image](StaticCoverage1.png)
 
-In our final code coverage report, we saw a great improvement over 25%. These tests streamlined the process of checking our new features. The only missing pieces that prevented us from achieveing a 100% score were the test that checks that the UI can start, and a small null value check in our API. These things are most likely easy to be fixed, and would not cause serious harm to the program. The most important pieces functioned properly, giving us a high score.
+In Sprint 4, we managed to increase the coverage all the way to 98%, only missing a few key components. This was a solid improvment, and was evidence that our program was operating well.
 
-In the future, we would take care of these issues to make sure that we are operating at peak performance.
+![image](StaticCoverage2.png) ![image](StaticCoverage3.png)
 
-(Nick)
-
-> _**[Sprint 4]** Discuss **future** refactoring and other design improvements your team would explore if the team had additional time._
+These were the two issues that stopped us from getting to the 100% coverage. In the first image, the issue is in the UfundApiApplicationTest suite, and an odd error was preventing these tests from completing. On the other hand, the second picture, the one that details the updateNeed() method, shows that a small "null" checking error prevents this code from being fully covered. We assume that these issues are easy fixes, although we have not managed to find a solution. These issues are small, and do not impact the program in a large way.
 
 ## Testing
-> _This section will provide information about the testing performed
-> and the results of the testing._
+
+This section of our project goes over the process of our testing, and how these tests influenced our overall project.
 
 ### Acceptance Testing
 > _**[Sprint 2 & 4]** Report on the number of user stories that have passed all their
@@ -308,16 +302,29 @@ In the future, we would take care of these issues to make sure that we are opera
 Sprint 2:
 
 - As of right now, our code coverage is rather lack luster. We have not been able to setup many tests for our current web application, hence the 0% coverage checks on the UI.
-
 - On the contrary, our backend application has a higher score but not an optimal one, around 70%. We will work on improving this score to create a more cohesive application.
-
 - Updated by Nick
 
 Sprint 3:
 - Due to the recent build failure of the spring boot getting our code coverage is challenging at the moment. All tests are implemented and successfully passed.
 - updated by Macca A. 
 
-![Sprint 3 Code Coverage](codecoverage.png) 
+Sprint 4:
+
+Final Code Coverage Improvements
+
+![image](firstCoverage.png)
+
+In our first code coverage report, we were missing a few pieces that caused us to receive a low score of around 70%. These were issues that we were going to address, in order to make sure that our projects worked as smoothly as possible. We also managed to index our UI in this test, although these tests are (assumed) not required. This is the reason behind the 0% coverage status.
+
+![image](secondCoverage.png)
+
+In our final code coverage report, we saw a great improvement over 25%. These tests streamlined the process of checking our new features. The only missing pieces that prevented us from achieveing a 100% score were the test that checks that the UI can start, and a small null value check in our API. These things are most likely easy to be fixed, and would not cause serious harm to the program. The most important pieces functioned properly, giving us a high score.
+
+In the future, we would take care of these issues to make sure that we are operating at peak performance.
+
+(Nick)
+
 ## Ongoing Rationale
 >_**[Sprint 1, 2, 3 & 4]** Throughout the project, provide a time stamp **(yyyy/mm/dd): Sprint # and description** of any _**mayor**_ team decisions or design milestones/changes and corresponding justification._
 
