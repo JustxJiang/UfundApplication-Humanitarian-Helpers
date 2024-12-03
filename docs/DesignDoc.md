@@ -1,6 +1,3 @@
----
-geometry: margin=1in
----
 # PROJECT Design Documentation
 
 ## Team Information
@@ -17,15 +14,11 @@ geometry: margin=1in
 
 This project is focused on making software that will assist various humanitarian and pet charities by collecting donations from crowdsourced supporters. All donations are voluntary.
 
-### Purpose
-> _**[Sprint 2 & 4]** Provide a very brief statement about the project and the most important user group and user goals._
-
-#### Pawsitive Connections
+### Pawsitive Connections
 The purpose of this project is to develop a humanitarian website that supports pet owners and animal shelters by fulfilling their needs. Donations of all kinds are accepted, whether it be monetary or physical items.
 (Macca, Jordan, Nick)
 
 ### Glossary and Acronyms
-> _**[Sprint 2 & 4]** Provide a table of terms and acronyms._
 
 | Term | Definition |
 |------|------------|
@@ -82,7 +75,6 @@ As a layer of protection, all usernames and passwords will be unique and stored 
 (Kelly, Jordan, Nick)
 
 ### MVP Features
->  _**[Sprint 4]** Provide a list of top-level Epics and/or Stories of the MVP._
 
 EPIC: Needs Management
 
@@ -128,28 +120,22 @@ EPIC: Manager
 
 
 ### Enhancements
-> _**[Sprint 4]** Describe what enhancements you have implemented for the project._
 
 Map View: 
 
-With the map view, a helper find local shelters or if they want to adopt a pet ,  see where the animal is located. 
+With the map view, a helper find local shelters or if they want to adopt a pet, see where the animal is located. Can also be used in a way that allows users to donate and/or volunteer in person, as well as advertise the location to others.
 
 Adoption page:
 
-The adoption page designed to help local shelters or pet owners list their animals adoption. 
+The adoption page designed to help local shelters or pet owners list their animals adoption. This is free ad-space for those looking to promote their charities and other organizations. It can be used for things like adopting pets, all the way to canned food drives.
 
-(Macca)
-
+(Macca, Nick)
 
 ## Application Domain
 
 This section describes the application domain.
 
 ![Domain Model](domain-model.png)
-
-> _**[Sprint 2 & 4]** Provide a high-level overview of the domain for this application. You
-> can discuss the more important domain entities and their relationship
-> to each other._
 
 | Class | Definition | Relations |
 |-------|------------|-----------|
@@ -169,8 +155,6 @@ This section describes the application architecture.
 ### Summary
 
 The following Tiers/Layers model shows a high-level view of the webapp's architecture. 
-**NOTE**: detailed diagrams are required in later sections of this document.
-> _**[Sprint 1]** (Augment this diagram with your **own** rendition and representations of sample system classes, placing them into the appropriate M/V/VM (orange rectangle) tier section. Focus on what is currently required to support **Sprint 1 - Demo requirements**. Make sure to describe your design choices in the corresponding _**Tier Section**_ and also in the _**OO Design Principles**_ section below.)_
 
 ![The Tiers & Layers of the Architecture](architecture-tiers-and-layers.png)
 
