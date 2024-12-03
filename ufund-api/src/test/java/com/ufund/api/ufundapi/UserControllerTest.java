@@ -74,6 +74,23 @@ public class UserControllerTest {
    }
 
    @Test
+   public void testCreateNeed() throws IOException {
+      Need need = new Need("The Guy", 1);
+      Mockito.when(this.mockCupboardDAO.createNeed(need)).thenReturn(need);
+      ResponseEntity<Need> response = this.userController.createNeed(need);
+      Assertions.assertEquals(HttpStatus.CREATED, response.getStatusCode());
+   }
+
+   @Test
+   public void testCreateNeedConflict() throws IOException {
+      Need need = null;
+      Mockito.when(this.mockCupboardDAO.createNeed(need)).thenReturn(need);
+      ResponseEntity<Need> response = this.userController.createNeed(need);
+      Assertions.assertEquals(HttpStatus.CONFLICT, response.getStatusCode());
+   }
+
+
+   @Test
    public void testUpdateNeed() throws IOException {
       Need need = new Need("Food", 5);
       Mockito.when(this.mockCupboardDAO.getNeed(need.getId())).thenReturn(need);
@@ -101,6 +118,14 @@ public class UserControllerTest {
         ResponseEntity<Need> response = userController.updateNeed(need.getId(),need);
         assertEquals(HttpStatus.INTERNAL_SERVER_ERROR,response.getStatusCode());
     }
+
+    @Test
+    public void testUpdateNeedNotFound() throws IOException { 
+         Need need = new Need("Zilch", 129);
+         when(mockCupboardDAO.getNeed(need.getId())).thenReturn(need);
+         ResponseEntity<Need> response = userController.updateNeed(need.getId(),need);
+         assertEquals(HttpStatus.NOT_FOUND ,response.getStatusCode());
+     }
     
     @Test
     public void testGetNeedsHandleException() throws IOException { 
@@ -144,6 +169,16 @@ public class UserControllerTest {
         assertEquals(HttpStatus.OK,response.getStatusCode());
     }
 
+    @Test
+    void testDeleteNeedNotFound() throws IOException{
+       Need need = new Need("testNeed2", 919);
+       Need[] needs = new Need[]{need};
+       Mockito.when(this.mockCupboardDAO.getNeeds()).thenReturn(needs);
+       Mockito.when(this.mockCupboardDAO.deleteNeed(need.getId())).thenReturn(false);
+       ResponseEntity<Need> response = this.userController.deleteNeed(need.getId());
+       assertEquals(HttpStatus.NOT_FOUND,response.getStatusCode());
+   }
+
     @SuppressWarnings("null")
    @Test 
     void testSearchNeed() throws IOException{
@@ -156,5 +191,8 @@ public class UserControllerTest {
         assertEquals(1,response.getBody().length);
         assertEquals(need,response.getBody()[0]);
     }
+
+
+
 }
 

@@ -152,21 +152,28 @@ public class UserController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Need> deleteNeed(@PathVariable int id) {
+    public ResponseEntity<Need> deleteNeed(@PathVariable int id) throws IOException {
         LOG.info("DELETE /needs/" + id);
+
+
         try {
             Need[] needarray = needDao.getNeeds();
             for(int i = 0; i < needarray.length; i++){
                 if(needarray[i].getId() == id){
                     needDao.deleteNeed(id);
-                    return new ResponseEntity<>(HttpStatus.OK);
                 }
             }
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+
+            boolean deleted = needDao.deleteNeed(id);
+            if (deleted) {
+                return new ResponseEntity<>(HttpStatus.OK);
+            }
+            else {
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
         } catch (Exception e) {
-                    LOG.log(Level.SEVERE, e.getLocalizedMessage());
-                }
-        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }
 

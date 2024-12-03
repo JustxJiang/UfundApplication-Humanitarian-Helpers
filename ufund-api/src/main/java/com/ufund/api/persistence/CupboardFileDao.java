@@ -215,7 +215,7 @@ public class CupboardFileDao implements CupboardDAO {
                 return save();
             }
             else
-                return false;
+                throw new IOException("Not found");
         }
     }
 

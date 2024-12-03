@@ -82,6 +82,25 @@ public class CupboardFileDaoTest {
     }
 
     @Test
+    public void testGetNeedNull() {
+        // Invoke
+        Need need = cupboardFileDAO.getNeed(99);
+
+        // Analzye
+        assertEquals(need,null);
+    }
+
+
+    @Test
+    public void testUpdateNeed() throws IOException {
+        Need theUpdate = new Need("Test Name", 1);
+        Need newNeed = cupboardFileDAO.updateNeed(theUpdate);
+
+        assertEquals(theUpdate, newNeed);
+
+    }
+
+    @Test
     public void testDeleteNeed() throws IOException {
         Need need = cupboardFileDAO.getNeed(0);
         boolean IsSuccess = cupboardFileDAO.deleteNeed(0);
@@ -92,8 +111,9 @@ public class CupboardFileDaoTest {
     @Test
     public void testDeleteNeedFail() {
         assertThrows(IOException.class, () -> {
-            cupboardFileDAO.deleteNeed(99);
+            cupboardFileDAO.deleteNeed(12391);
         });
     }
+    
 
 }
