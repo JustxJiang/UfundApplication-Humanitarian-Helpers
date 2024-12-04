@@ -204,14 +204,10 @@ The classes supporting the uFundAPI are found in the UserController class. The U
 6. deleteNeed() - Deletes a need using the passed through ID.
 Updated by Nick
 
-> _**[Sprint 4]** Provide a summary of this tier of your architecture. This
-> section will follow the same instructions that are given for the View
-> Tier above._
+The UserController is designed to handle incoming HTTP requests, interact with the Model tier, and return an HTTP response. It ensures smooth communication between the front end and backend. 
 
-> _At appropriate places as part of this narrative provide **one** or more updated and **properly labeled**
-> static models (UML class diagrams) with some details such as associations (connections) between classes, and critical attributes and methods. (**Be sure** to revisit the Static **UML Review Sheet** to ensure your class diagrams are using correct format and syntax.)_
-> 
-![Replace with your ViewModel Tier class diagram 1, etc.](model-placeholder.png)
+![image](https://github.com/user-attachments/assets/52b08ace-ff0c-4484-9e17-4e71794589f8)
+
 
 ### Model Tier
 
