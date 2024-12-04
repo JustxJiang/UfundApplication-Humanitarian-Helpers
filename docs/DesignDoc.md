@@ -179,11 +179,17 @@ This section describes the web interface flow; this is how the user views and in
 
 PASITIVECONNECTIONS is designed to guide users seamlessly through their tasks. Users begin their journey on the homepage, which allows them to sign in with an email and password. Users can navigate the Cupboard or use the search feature to find needs they want to fulfill. Helper can go to the adoption page and see various pets and the description of the pet including their age, gender, and name. If a user is interested in the pet the helper can see a map view of how far the pet is for adoption. Users engage with the platform through the Messages component for updates and confirmations, proceeding to donate via their carts. For account management, users can recover access using the Forget Password page if a user forgets their password.
 
-> _**[Sprint 4]** You must  provide at least **2 sequence diagrams** as is relevant to a particular aspects 
-> of the design that you are describing.  (**For example**, in a shopping experience application you might create a 
-> sequence diagram of a customer searching for an item and adding to their cart.)
-> As these can span multiple tiers, be sure to include an relevant HTTP requests from the client-side to the server-side 
-> to help illustrate the end-to-end flow._
+Sequence Diagrams 
+
+![image](https://github.com/user-attachments/assets/989bb6a3-556b-40bf-a9e5-2035310fbada)
+
+![image](https://github.com/user-attachments/assets/dd31a184-f331-4a3b-9a78-925cecb4de2a)
+
+
+UML
+
+![image](https://github.com/user-attachments/assets/8be12259-b650-479b-b521-29a1f6dea5cc)
+
 
 > _**[Sprint 4]** To adequately show your system, you will need to present the **class diagrams** where relevant in your design. Some additional tips:_
  >* _Class diagrams only apply to the **ViewModel** and **Model** Tier_
