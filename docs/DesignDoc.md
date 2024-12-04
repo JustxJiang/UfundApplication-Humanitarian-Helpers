@@ -204,7 +204,9 @@ The classes supporting the uFundAPI are found in the UserController class. The U
 6. deleteNeed() - Deletes a need using the passed through ID.
 Updated by Nick
 
-The UserController is designed to handle incoming HTTP requests, interact with the Model tier, and return an HTTP response. It ensures smooth communication between the front end and backend. 
+The UserController is designed to handle incoming HTTP requests, interact with the Model tier, and return an HTTP response. It ensures smooth communication between the front end and backend.
+
+Class in the ViewModelTeir
 
 ![image](https://github.com/user-attachments/assets/52b08ace-ff0c-4484-9e17-4e71794589f8)
 
@@ -216,17 +218,10 @@ We use the Need class to interact with various needs, as in when a need has to b
 The CupboardDAO and CupboardFileDAO classes are used to interact with the cupboard found in a respectively named JSON file. These files will interpret the data and return it to the developer attempting to access this data. It is a means of persistence when updating/creating/deleting data.
 Updated by Nick
 
-> _**[Sprint 2, 3 & 4]** Provide a summary of this tier of your architecture. This
-> section will follow the same instructions that are given for the View
-> Tier above._
 
-Throughout Sprint 2 we worked on implementing this logic into the UI application that the user will interact with. In this sense, the methods that were mentioned previously were recreated in such a way that became much more user friendly so that helpers/managers that attempt to interact with the cupboard will not have to use cURL commands to retrieve information.
-Updated by Nick
 
-> _At appropriate places as part of this narrative provide **one** or more updated and **properly labeled**
-> static models (UML class diagrams) with some details such as associations (connections) between classes, and critical attributes and methods. (**Be sure** to revisit the Static **UML Review Sheet** to ensure your class diagrams are using correct format and syntax.)_
-> 
-![Replace with your Model Tier class diagram 1, etc.](model-placeholder.png)
+![image](https://github.com/user-attachments/assets/3b180f57-0b0e-4d76-862d-cdf1b1b1baef)
+
 
 ## OO Design Principles
 
