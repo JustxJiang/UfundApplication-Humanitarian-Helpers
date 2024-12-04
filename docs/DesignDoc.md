@@ -191,11 +191,6 @@ UML
 ![image](https://github.com/user-attachments/assets/8be12259-b650-479b-b521-29a1f6dea5cc)
 
 
-> _**[Sprint 4]** To adequately show your system, you will need to present the **class diagrams** where relevant in your design. Some additional tips:_
- >* _Class diagrams only apply to the **ViewModel** and **Model** Tier_
->* _A single class diagram of the entire system will not be effective. You may start with one, but will be need to break it down into smaller sections to account for requirements of each of the Tier static models below._
- >* _Correct labeling of relationships with proper notation for the relationship type, multiplicities, and navigation information will be important._
- >* _Include other details such as attributes and method signatures that you think are needed to support the level of detail in your discussion._
 
 ### ViewModel Tier
 
