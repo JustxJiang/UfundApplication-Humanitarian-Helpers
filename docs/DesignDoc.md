@@ -228,20 +228,34 @@ Updated by Nick
 We have worked to implement single responsibility and low coupling into our project. This way, our classes only have one purpose in the project and do not become too overburdened. Our hope is to have a fluid program that has many moving parts, but work in high cohesion. As for low coupling, we have worked to ensure that we are not accessing classes unnecessarily to achieve a similar goal. We have refactored our project for this purpose.
 Updated by Nick
 
-Sprint 2
-![image](https://github.com/user-attachments/assets/fd89a1d0-9e12-4f4e-834f-e02edbfb8262)
 
-> ![image](https://github.com/user-attachments/assets/64ca8e22-cad6-4c21-94fc-7cc2eea267c1)
 
-Sprint 3
-Controller tier
->![image](https://github.com/user-attachments/assets/6ba27a38-2529-4cb9-a020-f7041d680025)
+View Teir
+
+>![image](https://github.com/user-attachments/assets/1d5dc93b-701d-4dcd-b8e6-1e9ceb1510e3)
+
+
+
+
+
+View Model Teir
+
+![image](https://github.com/user-attachments/assets/7d6887f5-698b-4038-a0d3-80faaa31d5f5)
+![image](https://github.com/user-attachments/assets/baf633a5-b105-4071-86a4-296cf14af5a7)
+
+
 
 Model tier
->![image](https://github.com/user-attachments/assets/6dd96367-3674-4adc-9ce0-d0d57da47f01)
+![image](https://github.com/user-attachments/assets/6022278e-37ce-4957-8b92-0bb0b81accac)
 
-Persistence tier
->![image](https://github.com/user-attachments/assets/5bd2b13b-8812-4999-8da2-c3e236eafe5e)
+![image](https://github.com/user-attachments/assets/c05c178d-6640-4437-98eb-a19f226f82df)
+
+![image](https://github.com/user-attachments/assets/ea881bed-aef3-4406-9d66-bb6c8a1379e4)
+
+
+
+
+
 
 
 ## Static Code Analysis/Future Design Improvements
