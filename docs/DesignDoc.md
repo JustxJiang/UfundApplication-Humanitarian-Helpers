@@ -229,7 +229,8 @@ We have worked to implement single responsibility and low coupling into our proj
 Updated by Nick
 
 Sprint 2
-> ![image](https://github.com/user-attachments/assets/cc190751-a308-48cb-b5ff-2a64875533fb)
+![image](https://github.com/user-attachments/assets/fd89a1d0-9e12-4f4e-834f-e02edbfb8262)
+
 > ![image](https://github.com/user-attachments/assets/64ca8e22-cad6-4c21-94fc-7cc2eea267c1)
 
 Sprint 3
