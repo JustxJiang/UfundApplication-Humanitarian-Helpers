@@ -43,7 +43,7 @@ The purpose of this project is to develop a humanitarian website that supports p
 | PUT | HTTP Method to update or replace an already pre-existing entry. |
 | PATCH | HTTP Method that partially updates already existing data. |
 | DELETE | HTTP Method that removes data from a file located on the server. |
-(Jordan, Nick)
+(Nick, Jordan)
 
 ## Requirements
 
@@ -69,8 +69,6 @@ This section describes the features of the application.
 A barebones version of the finished application that has enough functionality to be tested by users for the purpose of feedback.
 
 In our case, the MVP should contain enough functionality to login, be able to view various different causes, add items to a cart, and checkout. Managers should also be able to access a cupboard that contains items currently in stock, and update these as necessary.
-
-As a layer of protection, all usernames and passwords will be unique and stored on our server.
 
 (Kelly, Jordan, Nick)
 
@@ -166,7 +164,6 @@ The View is the client-side SPA built with Angular utilizing HTML, CSS and TypeS
 
 Both the ViewModel and Model are built using Java and Spring Framework. Details of the components within these tiers are supplied below.
 
-
 ### Overview of User Interface
 
 This section describes the web interface flow; this is how the user views and interacts with the web application.
@@ -185,12 +182,9 @@ Sequence Diagrams
 
 ![image](https://github.com/user-attachments/assets/dd31a184-f331-4a3b-9a78-925cecb4de2a)
 
-
 UML
 
 ![image](https://github.com/user-attachments/assets/8be12259-b650-479b-b521-29a1f6dea5cc)
-
-
 
 ### ViewModel Tier
 
@@ -210,7 +204,6 @@ Class in the ViewModelTeir
 
 ![image](https://github.com/user-attachments/assets/52b08ace-ff0c-4484-9e17-4e71794589f8)
 
-
 ### Model Tier
 
 We use the Need class to interact with various needs, as in when a need has to be updated or created. The ID can be found by calling on it using methods from this class.
@@ -218,32 +211,21 @@ We use the Need class to interact with various needs, as in when a need has to b
 The CupboardDAO and CupboardFileDAO classes are used to interact with the cupboard found in a respectively named JSON file. These files will interpret the data and return it to the developer attempting to access this data. It is a means of persistence when updating/creating/deleting data.
 Updated by Nick
 
-
-
 ![image](https://github.com/user-attachments/assets/3b180f57-0b0e-4d76-862d-cdf1b1b1baef)
-
 
 ## OO Design Principles
 
 We have worked to implement single responsibility and low coupling into our project. This way, our classes only have one purpose in the project and do not become too overburdened. Our hope is to have a fluid program that has many moving parts, but work in high cohesion. As for low coupling, we have worked to ensure that we are not accessing classes unnecessarily to achieve a similar goal. We have refactored our project for this purpose.
 Updated by Nick
 
-
-
 View Teir
 
 >![image](https://github.com/user-attachments/assets/1d5dc93b-701d-4dcd-b8e6-1e9ceb1510e3)
-
-
-
-
 
 View Model Teir
 
 ![image](https://github.com/user-attachments/assets/7d6887f5-698b-4038-a0d3-80faaa31d5f5)
 ![image](https://github.com/user-attachments/assets/baf633a5-b105-4071-86a4-296cf14af5a7)
-
-
 
 Model tier
 ![image](https://github.com/user-attachments/assets/6022278e-37ce-4957-8b92-0bb0b81accac)
@@ -251,12 +233,6 @@ Model tier
 ![image](https://github.com/user-attachments/assets/c05c178d-6640-4437-98eb-a19f226f82df)
 
 ![image](https://github.com/user-attachments/assets/ea881bed-aef3-4406-9d66-bb6c8a1379e4)
-
-
-
-
-
-
 
 ## Static Code Analysis/Future Design Improvements
 
@@ -292,7 +268,7 @@ This section of our project goes over the process of our testing, and how these 
 
 ### Unit Testing and Code Coverage
 
-![Sprint 2 Code Coverage](codecoverage.png)
+![image](codecoverage.png)
 
 Sprint 2:
 
@@ -320,10 +296,27 @@ In the future, we would take care of these issues to make sure that we are opera
 
 (Nick)
 
+### Recommendations for Improvement
+
+Over the course of this project, we encountered some issues. The biggest issue that we had out of the gate was with Angular, as our Java backend went pretty smooth.
+
+1. Angular: Standalone and AppModule
+- This was the biggest issue for us, and ultimately caused us to overhaul our project just days before a demo was due. The issue arose when we wanted to connect different pieces of our project together, but encountered the tedious challenge of having standalone/non-standalone components that were not compatible with each other. After some debugging, we managed to fix the login page connection, although this was just a small piece in a much bigger puzzle. At the end of our discussions, we found it to be much easier to start from the ground up and incorporate our old features into the new project based around the TourOfHeroes tutorial program. By doing so, we also managed to clean up a lot of the grammatical issues like improper variable and class names. Furthermore, it also allowed us to successfully implement our new features with the old and not have to deal with the standalone bugs.
+
+2. Code Coverage
+- Our code coverage was significantly lower than we wanted it to be coming out of Sprint 2. This is something we changed in Sprint 3 by implenting a more comprehensive suite of unit tests to almost fully cover all of the bases. To improve here, we did miss some small, but not functionality threatening tests, as detailed in the code coverage sections. 
+
+![image](firstCoverage.png)
+
+At a glance, there needs to be an additional null check in the updateNeed() method, as well as a test for the starting of the Angular program, which for some reason returns a red flag when running the tests.
+
+![image](secondCoverage.png)
+
 ## Ongoing Rationale
 >_**[Sprint 1, 2, 3 & 4]** Throughout the project, provide a time stamp **(yyyy/mm/dd): Sprint # and description** of any _**mayor**_ team decisions or design milestones/changes and corresponding justification._
 
-Sprint 1: 
-Sprint 2:
-Sprint 3:
-Sprint 4:
+Sprint 1: n/a
+
+Sprint 2: Implement basic UI, note that we did not use AppModule in this build, and standalone was included.
+Sprint 3: Realized that implementing these features with standalone and without AppModule would be much harder than we though, decided to completely overhaul the code base and translate towards the "TourOfHeroes" UI that was built from the tutorial.
+Sprint 4: Minor bug fixes, nothing major changed during this sprint.
