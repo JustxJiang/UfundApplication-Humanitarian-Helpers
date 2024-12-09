@@ -312,11 +312,14 @@ At a glance, there needs to be an additional null check in the updateNeed() meth
 
 ![image](secondCoverage.png)
 
+(Nick)
+
 ## Ongoing Rationale
->_**[Sprint 1, 2, 3 & 4]** Throughout the project, provide a time stamp **(yyyy/mm/dd): Sprint # and description** of any _**mayor**_ team decisions or design milestones/changes and corresponding justification._
 
 Sprint 1: n/a
 
-Sprint 2: Implement basic UI, note that we did not use AppModule in this build, and standalone was included.
-Sprint 3: Realized that implementing these features with standalone and without AppModule would be much harder than we though, decided to completely overhaul the code base and translate towards the "TourOfHeroes" UI that was built from the tutorial.
-Sprint 4: Minor bug fixes, nothing major changed during this sprint.
+Sprint 2: (9/24) Implement basic UI, note that we did not use AppModule in this build, and standalone was included.
+Sprint 3: (10/24) Realized that implementing these features with standalone and without AppModule would be much harder than we though, decided to completely overhaul the code base and translate towards the "TourOfHeroes" UI that was built from the tutorial.
+Sprint 4: (11/24) Minor bug fixes, nothing major changed during this sprint.
+
+(Nick)
