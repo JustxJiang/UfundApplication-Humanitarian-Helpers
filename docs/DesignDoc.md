@@ -174,13 +174,13 @@ PASITIVECONNECTIONS is designed to guide users seamlessly through their tasks. U
 
 Sequence Diagrams 
 
-![image](https://github.com/user-attachments/assets/989bb6a3-556b-40bf-a9e5-2035310fbada)
+![image](1.png)
 
-![image](https://github.com/user-attachments/assets/dd31a184-f331-4a3b-9a78-925cecb4de2a)
+![image](2.png)
 
 UML
 
-![image](https://github.com/user-attachments/assets/8be12259-b650-479b-b521-29a1f6dea5cc)
+![image](3.png)
 
 ### ViewModel Tier
 
@@ -198,7 +198,7 @@ The UserController is designed to handle incoming HTTP requests, interact with t
 
 Class in the ViewModelTeir
 
-![image](https://github.com/user-attachments/assets/52b08ace-ff0c-4484-9e17-4e71794589f8)
+![image](4.png)
 
 ### Model Tier
 
@@ -207,7 +207,7 @@ We use the Need class to interact with various needs, as in when a need has to b
 The CupboardDAO and CupboardFileDAO classes are used to interact with the cupboard found in a respectively named JSON file. These files will interpret the data and return it to the developer attempting to access this data. It is a means of persistence when updating/creating/deleting data.
 Updated by Nick
 
-![image](https://github.com/user-attachments/assets/3b180f57-0b0e-4d76-862d-cdf1b1b1baef)
+![image](5.png)
 
 ## OO Design Principles
 
@@ -216,19 +216,19 @@ Updated by Nick
 
 View Teir
 
->![image](https://github.com/user-attachments/assets/1d5dc93b-701d-4dcd-b8e6-1e9ceb1510e3)
+>![image](6.png)
 
 View Model Teir
 
-![image](https://github.com/user-attachments/assets/7d6887f5-698b-4038-a0d3-80faaa31d5f5)
-![image](https://github.com/user-attachments/assets/baf633a5-b105-4071-86a4-296cf14af5a7)
+![image](7.png)
+![image](8.png)
 
 Model tier
-![image](https://github.com/user-attachments/assets/6022278e-37ce-4957-8b92-0bb0b81accac)
+![image](9.png)
 
-![image](https://github.com/user-attachments/assets/c05c178d-6640-4437-98eb-a19f226f82df)
+![image](10.png)
 
-![image](https://github.com/user-attachments/assets/ea881bed-aef3-4406-9d66-bb6c8a1379e4)
+![image](11.png)
 
 ## Static Code Analysis/Future Design Improvements
 
