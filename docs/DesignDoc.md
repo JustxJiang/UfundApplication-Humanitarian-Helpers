@@ -317,7 +317,9 @@ At a glance, there needs to be an additional null check in the updateNeed() meth
 Sprint 1: n/a
 
 Sprint 2: (9/24) Implement basic UI, note that we did not use AppModule in this build, and standalone was included.
+
 Sprint 3: (10/24) Realized that implementing these features with standalone and without AppModule would be much harder than we though, decided to completely overhaul the code base and translate towards the "TourOfHeroes" UI that was built from the tutorial.
+
 Sprint 4: (11/24) Minor bug fixes, nothing major changed during this sprint.
 
 (Nick)
